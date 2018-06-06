@@ -1,18 +1,12 @@
 /*
- * Arduino trådlös jordsensor & tempgivare
- * Mäter jordens värde & temp och skickar iväg till basenheten
- * Skickar med viss mellanrum, varje sensor har ett unikt id nummer som referens
- * Förprogrammering i koden för enklare uppdatering.
- * Defina bara vilken sensor som skall uppdateras.
- * Jord sensorena börjar på nr 45
- * RGB Led för indikering av vad som sker.
- *
- * Hela systemet består av en bas enhet som sköter koppling till servern och tar emot värden.
- * Sensorerna ställs in på servern.
- * Relä enheterna tar emot signal från basenheten och är direkt ansluten till ström. Dom aktiverar pumparna eller kran ventiler beroende på vad man har.
- * Relä enheterna börjar sitt ID nr på 25
- * Definiera TEST för att aktivera serial rapporter annars så ange DRIFT
- * Vi sätter arduinon i sömn och väcker den var 10 minut.
+ * Arduino wireless Soil sensor
+ * When we reading the soil sensor we firs power up it thru an transistor, we never have power on it
+ * when we don't use it.
+ * Setup to check every hour
+ * Define witch sensor to use before uploading.
+ * And define TEST if you need serial printing when testing.
+ * If you want to change how often it checks, you do it in the counterHandler()
+ * Use an ATMEGA328P-PU chip to save the battery, running an arduino on battery without modification is not good.
  */
 #include <Arduino.h>
 #include <avr/sleep.h>
@@ -24,11 +18,11 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 void enterSleep();
-#define SENS2
-#define TEST_EJ
-#define BATTERI
+#define SENS2 //Define the sensor here
+#define TEST_EJ // Change to TEST if you need the Serial printing
+#define BATTERI //Change this if you don't want battery testing
 
-//För sömn läget
+//For sleep mode
 volatile int f_wdt = 1;
 int counter = 0;
 int packetCounter = 0;
@@ -36,108 +30,107 @@ int packetCounter = 0;
 #ifdef SENS1
 struct package
 {
-        int X=4501; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4501; // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 int skickar = 4501;
 #endif
 #ifdef SENS2
 struct package
 {
-        int X=4502; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4502;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 #ifdef SENS3
 struct package
 {
-        int X=4503; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4503;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 #ifdef SENS4
 struct package
 {
-        int X=4504; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4504;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 #ifdef SENS5
 struct package
 {
-        int X=4505; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4505;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 #ifdef SENS6
 struct package
 {
-        int X=4506; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4506;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 #ifdef SENS7
 struct package
 {
-        int X=4507; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4507;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 #ifdef SENS8
 struct package
 {
-        int X=4508; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4508;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 #ifdef SENS9
 struct package
 {
-        int X=4509; // Detta är sändarens id nr
-        int Y=1; // Detta är jordens fuktighetsvärde (Räknas sen ut i huvudenheten)
-        float Z=1; //Detta är jordens temperatur
-        float F=1; //Detta är volten
+        int X=4509;  // Sensor ID number
+        int Y=1; // Soil value
+        float Z=1; //Soil temp
+        float F=1; //Battery Level
 };
 #endif
 typedef struct package Package;
 Package data;
-//Inställning för RGB Led som ska fungera som en status indikation på sensorns uppgift.
+//Pin setup for RGB Led (I used an anode led)
 int redPin = 6;
 int greenPin = 5;
 int bluePin = 3;
-//Inställning för avläsning av jordsensor
+//Settings for the soil sensor
 /*
- * Jordsensorn får först ström via en npn transistor som styrs via en digital pinne.
- * Där efter så avläses via en analog pinne.
+ * The soil sensor will get power thru an NPN transistor that is trigged by pin 10 and then read thru Analog 0
  */
 int sensorVCC = 10;
 int jordSensor = A0;
-//Inställning för temperatur sensor
+//Settings for temp sensor
 #define ONE_WIRE_BUS 2
 #define TEMPERATURE_PRECISION 9
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 DeviceAddress jordtemp1;
-RF24 myRadio (7, 8); //Anslutning för nRF24L01
+RF24 myRadio (7, 8); //Connections for NRF24L01
 const uint64_t addresses[2] = { 0xF0F0F0F0E1LL, 0xABCDABCD71LL };
 
-#define COMMON_ANODE
+#define COMMON_ANODE //If you have Common Anode RGB Led (VCC instead of GND)
 
 long readVcc() {
   // Read 1.1V reference against AVcc
@@ -181,10 +174,11 @@ void counterHandler()
         // Increment the sleep counter
         counter++;
 
-        // Should be 75 for 10 minutes (75 * 8 = 600 seconds = 10 minutes)
+        // Should be 450 for 1 hour (450 * 8 = 3600 seconds = 1 hour)
+        // In sleep mode they wake up every 8 secound
         // Use 1 for debugging purposes
 
-        if(counter == 450) { //1 timme
+        if(counter == 450) { //Change here the check time
                 // Reset the counter to 0
                 counter = 0;
 
@@ -251,7 +245,7 @@ void setupRadio()
 
 void setupTermometer()
 {
-        //Inställningar för temp sensor
+        //Settings for temp sensor
         sensors.begin();
         Serial.print(sensors.getDeviceCount(), DEC);
         if (sensors.isParasitePowerMode()) Serial.println("ON");
@@ -259,10 +253,10 @@ void setupTermometer()
 
         if (!sensors.getAddress(jordtemp1, 0)) Serial.println("Unable to find address for Device 0");
         sensors.setResolution(jordtemp1, TEMPERATURE_PRECISION);
-        //Inställningar för jord sensor
+        //Settings for soil sensor
         pinMode(sensorVCC, OUTPUT);
         digitalWrite(sensorVCC, LOW);
-        //Inställningar för RGB led
+        //Settings for RGB led
         pinMode(redPin, OUTPUT);
         pinMode(greenPin, OUTPUT);
         pinMode(bluePin, OUTPUT);
@@ -291,12 +285,10 @@ void setup() {
 void printVolts()
 {
         /*
-         * Denna funktion avläser batteriet och om det sjunker under önskad nivå så ska röd färg lysa på dioden. Lägg till printVolts() i loopen om ni vill använda batteri varnare.
+         * Checks the battery level and flashes red if low power.
          */
-        //int sensorValue = analogRead(A2); //Via motstånd läser vi av hur många volt det är
-        //data.F = sensorValue * (5.00 / 1023.00) * 2; //konverterar till korrekt volt
         data.F = readVcc();
-        if (data.F < 3200) //Ställ in lägsta nivå för larm av batteri.
+        if (data.F < 3200) //Change here the warn level on the battery in millivolt
         {
                 setColor(255, 0, 0);
                 delay(500);
@@ -315,20 +307,20 @@ void printVolts()
 
 void jordSensorRun() {
         /*
-         * Denna avläser jordsensorn och registrerar värdet på jordens fuktighet och lägger in det i Y som sedan kommer att skickas iväg.
-         * Vi börjar att aktivera ström till sensorn.
+         * Checks the soil sensor.
+         * First we need to power it.
          */
-        setColor(80, 0, 80); //Ändrar färgen på rgb till lila för avläsning
-        digitalWrite(sensorVCC, HIGH);   //Aktiverar ström till jordsensorn
-        delay(100); //För att säkerhetsställa att den har ström
-        data.Y = analogRead(jordSensor); //Avläser jordensorn och sparar värdet
+        setColor(80, 0, 80); //Change colour to purple
+        digitalWrite(sensorVCC, HIGH);   //Enable power to soil sensor
+        delay(100); //Delay so we know we have power
+        data.Y = analogRead(jordSensor); //Read the analog sensor
   #ifdef TEST
-        Serial.print("Jordsensor: ");
+        Serial.print("Soil Sensor: ");
         Serial.println(data.Y);
   #endif
-        digitalWrite(sensorVCC, LOW); //Stänger av ström och väntar en sekund
-        delay(1000);
-        setColor(0, 0, 0); //Stänger av RGB dioden för att spara på ström
+        digitalWrite(sensorVCC, LOW); //Shut down the power
+        delay(100);
+        setColor(0, 0, 0); //No more colour on the RGB LED
 
 }
 
@@ -339,11 +331,11 @@ void printTemperature(DeviceAddress deviceAddress)
         Serial.print("Temp C: ");
         Serial.print(data.Z);
         Serial.print(" Temp F: ");
-        Serial.println(DallasTemperature::toFahrenheit(data.Z)); // Visar i Fahrenheit
+        Serial.println(DallasTemperature::toFahrenheit(data.Z));
  #endif
 }
 
-//Dessa funktioner är för temperatur givaren
+//For the temp sensor
 void printAddress(DeviceAddress deviceAddress)
 {
         for (uint8_t i = 0; i < 8; i++)
@@ -355,19 +347,19 @@ void printAddress(DeviceAddress deviceAddress)
 
 void jordTempRun() {
 /*
- * Denna funktion avläser jordens temperatur via temperatur sensorn.
- * Värdet registreras i Z som sedan kommer att skickas.
+ * This function check the temp sensor
+ * And publish it in package Z
  * */
         setColor(80, 0, 80);
  #ifdef TEST
-        Serial.print("Kollar temperatur");
+        Serial.print("Checking temperature");
  #endif
         sensors.requestTemperatures();
         printTemperature(jordtemp1);
  #ifdef TEST
-        Serial.println("Temp klar");
+        Serial.println("Temp done");
  #endif
-        delay(1000);
+        delay(100);
         setColor(0, 0, 0);
 }
 
@@ -375,20 +367,18 @@ void loop() {
   #ifdef BATTERI
         printVolts();
   #endif
-        jordSensorRun();   //Börja med avläsning av jordsensorn
-        jordTempRun(); //Börja med avläsning av jord tempen
-        //  if (myRadio.write(&data, sizeof(data))) {
-        myRadio.write(&data, sizeof(data));         //Skicka iväg uppgifter till mottagaren
+        jordSensorRun();   //First check the soil sensor
+        jordTempRun(); //Then the temp
+        myRadio.write(&data, sizeof(data));         //And now we sending it to the Base system.
 #ifdef TEST
-        //Serial.println(skickar);
         Serial.print("Sensor: ");
         Serial.println(data.X);
-        Serial.print("Jordsensor: ");
+        Serial.print("Soil: ");
         Serial.println(data.Y);
-        Serial.print("Jordtemp: ");
+        Serial.print("Temp: ");
         Serial.println(data.Z);
         Serial.print("Volt: ");
         Serial.println(data.F);
 #endif
-        enterSleep();
+        enterSleep(); //And go to sleep
 }
