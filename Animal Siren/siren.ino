@@ -1,16 +1,13 @@
 /*
- * Siren mottagaren används för att aktivera en kraftig siren som skall skrämma iväg vilda djur.
- * Rörelse sensorerna registrerar rörelse och om dom är i ett aktivt läge så kommer huvud enheten att aktivera
- * sirenen under en kort tid.
- * Sirenerna börjar på 85XX och fortsätter till 90000
- * Triggar ett relä som aktiverar en kraftig siren.
+ * The wireless siren sensor will be activated only when the animal sensor is in active mode an register som movements.
+ * The base system will send an activate signal and for how long it will be running.
+ * Define the right siren if you have more than one.
  */
-#include <Arduino.h>
 #include <SPI.h>
 #include "nRF24L01.h"
 #include "RF24.h"
 
-#define SIREN1
+#define SIREN1 //Define siren here
 #ifdef SIREN1
 int sendID = 8501;
 #endif
@@ -20,23 +17,23 @@ int sendID = 8502;
 
 struct paketet
 {
-        int I=1; // Detta är sändarens id nr
-        int J=0; // Detta är statusen på sirenen (1 för på 0 för av)
-        int K=5000;
+        int I=1; // The id number for the siren
+        int J=0; // If the siren is on or off
+        int K=5000; //For how long in millisecounds it will sound.
 };
 typedef struct paketet Package;
 Package sirenen;
 
-RF24 myRadio (7, 8); //Anslutning för nRF24L01
+RF24 myRadio (7, 8); //Connection for nRF24L01
 const uint64_t addresses[4] = { 0xF0F0F0F0E1LL, 0xABCDABCD71LL, 0xF0F0F0F0C3LL, 0xF0F0F0F0C1LL };
-
+//RGB Led pins
 int redPin = 6;
 int greenPin = 5;
 int bluePin = 3;
-
+//Relay pin
 int relaPin = 10;
 
-#define COMMON_ANODE
+#define COMMON_ANODE //If you have Common anode RGB Led (VCC instead of GND)
 
 void setColor(int red, int green, int blue) {
   #ifdef COMMON_ANODE
@@ -70,20 +67,6 @@ void setup() {
         setColor(0, 255, 0);
 }
 
-void sirenRun() {
-        //Kollar om läget är att starta eller stänga av siren. Sirenen körs kortare stunder bara.
-        if (sirenen.J == 1) {
-                digitalWrite(relaPin, HIGH);
-                setColor(0, 0, 255);
-                delay(sirenen.K);
-                sirenen.J = 0;
-                setColor(0, 255, 0);
-        } else if (sirenen.J == 0) {
-                digitalWrite(relaPin, LOW);
-                setColor(0, 255, 0);
-        }
-
-}
 
 void loop() {
         if ( myRadio.available(addresses[3]));
@@ -91,24 +74,24 @@ void loop() {
                 while (myRadio.available(addresses[3]))
                 {
                         myRadio.read( &sirenen, sizeof(sirenen) );
-                        //  Serial.println(info.O);
+                        
 
                         if (sirenen.I == sendID) {
                                 /*
-                                 * Vi jämför ID nummer och kontrollerar så det är vårat, om det är det utför uppgiften
+                                 * Check if it the right id number an update status
                                  */
 
                                 if (sirenen.J == 0) {
                                         digitalWrite(relaPin, LOW);
                                         setColor(0, 255, 0);
-                                        Serial.println("Sirenen inaktiverad");
+                                        Serial.println("Siren off");
                                         sirenen.J = 0;
                                 } else if (sirenen.J == 1) {
 
-                                        Serial.println("Siren aktiverad");
+                                        Serial.println("Siren on");
                                         digitalWrite(relaPin, HIGH);
                                         setColor(0, 0, 255);
-                                        delay(sirenen.K);
+                                        delay(sirenen.K); //The system is transmitting how long it will be on.
                                         digitalWrite(relaPin, LOW);
                                         setColor(0, 255, 0);
                                         sirenen.J = 0;
