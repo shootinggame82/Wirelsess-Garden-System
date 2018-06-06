@@ -1,5 +1,6 @@
 /*
  * This is the main system that controls everything, it's needed to be online to communicate whith an server. 
+ * This must be running on Arduino MEGA, and the ESP-01 baudrate must be set to 9600
  * The wifi settings is setup thru an SD card for easy change (no need to upload new code each time you change the WIFI)
  * This system has also an automatic reset if the ESP gets problem to communicate to the system. After 10 times of error it will
  * automatic restart the arduino. (This can also be done from the webpage)
