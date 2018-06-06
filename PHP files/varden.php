@@ -1,4 +1,5 @@
 <?php
+//This is the file that is connected every 30 secounds
 include 'db.php';
 $idag = date("Y-m-d");
 $nu = date("H:i:s");
@@ -30,7 +31,6 @@ $sql = "SELECT * FROM pumpar";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
-    // Räkna ihop antalet reserverade stolar
     while ($row = $result->fetch_assoc()) {
         $pumpar[] = $row["pumpnr"];
         $status[] = $row["aktiverad"];
@@ -41,7 +41,6 @@ $sql = "SELECT * FROM vilt";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
-    // Räkna ihop antalet reserverade stolar
     while ($row = $result->fetch_assoc()) {
         $snr = $row["viltsiren"];
         $vilt[] = $row["viltnr"];
@@ -51,7 +50,6 @@ if ($result->num_rows > 0) {
         $result2 = $mysqli->query($sql2);
 
         if ($result2->num_rows > 0) {
-            // Räkna ihop antalet reserverade stolar
             while ($row2 = $result2->fetch_assoc()) {
                 $siren[] = $row2["sirennr"];
             }
@@ -63,7 +61,6 @@ $sql = "SELECT * FROM uppgifter WHERE id = '1'";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows == 1) {
-    // Räkna ihop antalet reserverade stolar
     while ($row = $result->fetch_assoc()) {
         $torrjord = $row["torrjord"];
         $blotjord = $row["blotjord"];
@@ -76,11 +73,10 @@ if ($result->num_rows == 1) {
 }
 
 if ($insert_stmt = $mysqli->prepare("UPDATE uppgifter SET lastemp = '0' WHERE id = '1'")) {
-    // Execute the prepared query.
+    
     if (! $insert_stmt->execute()) {
         exit();
     }
-    //Slutförd
 }
 
 $json = json_encode($pumpar, JSON_NUMERIC_CHECK);
@@ -91,14 +87,14 @@ $json4 = json_encode($manuell, JSON_NUMERIC_CHECK);
 $json5 = json_encode($siren, JSON_NUMERIC_CHECK);
 
 if ($insert_stmt = $mysqli->prepare("UPDATE vilt SET manuellt = '0' WHERE manuellt = '1'")) {
-    // Execute the prepared query.
+    
     if (! $insert_stmt->execute()) {
         exit();
     }
 }
 
 if ($insert_stmt = $mysqli->prepare("UPDATE uppgifter SET omstart = '0' WHERE omstart = '1'")) {
-    // Execute the prepared query.
+    
     if (! $insert_stmt->execute()) {
         exit();
     }
@@ -106,7 +102,7 @@ if ($insert_stmt = $mysqli->prepare("UPDATE uppgifter SET omstart = '0' WHERE om
 
 if ($insert_stmt = $mysqli->prepare("UPDATE uppgifter SET datum = ?, tid = ? WHERE id = '1'")) {
     $insert_stmt->bind_param('ss', $datum, $tid);
-    // Execute the prepared query.
+    
     if (! $insert_stmt->execute()) {
         exit();
     }
