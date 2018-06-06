@@ -8,7 +8,6 @@
  * If you want to change how often it checks, you do it in the counterHandler()
  * Use an ATMEGA328P-PU chip to save the battery, running an arduino on battery without modification is not good.
  */
-#include <Arduino.h>
 #include <avr/sleep.h>
 #include <avr/power.h>
 #include <avr/wdt.h>
@@ -35,7 +34,6 @@ struct package
         float Z=1; //Soil temp
         float F=1; //Battery Level
 };
-int skickar = 4501;
 #endif
 #ifdef SENS2
 struct package
