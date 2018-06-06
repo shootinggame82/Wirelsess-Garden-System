@@ -1,12 +1,18 @@
+/*
+* Arduino Animal Sensor. Define the sensor you are going to upload to so you get the correct ID number
+* A simple led is used to inform about movement and low power.
+* You need the NRF library and the LowPower library to make it work (check the library folder on my github)
+* If you are testing and need serial printing define TEST and if you want battery check define BATTERI
+*/
 // **** INCLUDES *****
 #include "LowPower.h"
 #include <SPI.h>
 #include "nRF24L01.h"
 #include "RF24.h"
 
-#define SENS2
-#define TEST_EJ
-#define BATTERI
+#define SENS2 //Define the correct sesor here
+#define TEST_EJ //Change to TEST if you need serial printing
+#define BATTERI // If this is defined BATTERI it will check the battery level.
 
 // Use pin 2 as wake up pin
 const int wakeUpPin = 2;
@@ -24,18 +30,24 @@ int sendID = 6502;
  #ifdef SENS3
 int sendID = 6503;
  #endif
+#ifdef SENS4
+int sendID = 6504;
+ #endif
+#ifdef SENS5
+int sendID = 6505;
+ #endif
 
  struct vilt
 {
-        int D=sendID; // Detta är sändarens id nr
-        int E=0; // Detta är om vilt är aktiverat
-        float F=1; // Detta är volten
+        int D=sendID; // The animal sensors id number
+        int E=0; // If there pir sensor see movements
+        float F=1; // Battery level
 };
 
 typedef struct vilt Package1;
 Package1 sendback;
 
-RF24 myRadio (7, 8); //Anslutning för nRF24L01
+RF24 myRadio (7, 8); //Connections for the NRF24L01
 const uint64_t addresses[4] = { 0xF0F0F0F0E1LL, 0xABCDABCD71LL, 0x3A3A3A3AD2LL, 0xF0F0F0F0E3LL };
 
 long readVcc() {
@@ -73,12 +85,10 @@ void wakeUp()
 void printVolts()
 {
         /*
-         * Denna funktion avläser batteriet och om det sjunker under önskad nivå så ska röd färg lysa på dioden. Lägg till printVolts() i loopen om ni vill använda batteri varnare.
+         * This function checks the battery level (checked thru the AVcc on the ATMEGA chip
          */
-        //int sensorValue = analogRead(A2); //Via motstånd läser vi av hur många volt det är
-        //data.F = sensorValue * (5.00 / 1023.00) * 2; //konverterar till korrekt volt
         sendback.F = readVcc ();
-        if (sendback.F < 3200) //Ställ in lägsta nivå för larm av batteri.
+        if (sendback.F < 3200) //In millivolt when to alarm about low power
         {
                 digitalWrite(LedPin, HIGH);
                 delay(500);
@@ -100,9 +110,9 @@ void setup()
     pinMode(0, INPUT); 
     pinMode(LedPin, OUTPUT);
     #ifdef TEST
-    Serial.print("Laddar.");
+    Serial.print("Loading.");
     #endif
-    for( int i = 1; i <= 20; i++){  // LED at pin 13 blinks until PIR sensor is stabilized
+    for( int i = 1; i <= 20; i++){  
       #ifdef TEST
       Serial.print(".");
       #endif
@@ -112,11 +122,11 @@ void setup()
     delay(100); 
  }
  #ifdef TEST
- Serial.print(". Laddning klar");
+ Serial.print(". Pir Sensor Ready");
  #endif  
  delay(100);
         myRadio.begin();
-        myRadio.setPALevel(RF24_PA_LOW);
+        myRadio.setPALevel(RF24_PA_LOW); //Low is best when testing
         myRadio.setDataRate( RF24_1MBPS );
         myRadio.setRetries(15, 15);
         myRadio.setChannel(125);
@@ -138,7 +148,7 @@ void loop()
     // Disable external pin interrupt on wake up pin.
     detachInterrupt(0); 
     
-    // Do something here
+    // Check the sensor and transmitt if needed
     
     
     if (PIRsensorState != lastPIRsensorState){
@@ -156,8 +166,8 @@ void loop()
   else {
     myRadio.powerUp();
 
-                // Wait for radio to power up
-                delay(2);       
+      // Wait for radio to power up
+     delay(2);       
      digitalWrite(LedPin, HIGH); 
      sendback.E = 1;
      #ifdef TEST
