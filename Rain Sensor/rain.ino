@@ -1,6 +1,12 @@
-#define SENS1
-#define TEST
-#define BATTERI
+/*
+* This is the rain sensor for the garden system.
+* It uses ATMEGA chip for low power use.
+* Define the correct sensor number, normaly you don't need more than one.
+* If you need Serial print for testing, Define TEST
+*/
+#define SENS1 //Define the sensor
+#define TEST_EJ //Define TEST for serial print
+#define BATTERI //Change this if you don't want to check battery level
 #include <avr/sleep.h>
 #include <avr/power.h>
 #include <avr/wdt.h>
@@ -9,16 +15,18 @@
 #include "RF24.h"
 
 void enterSleep();
-//För sömn läget
+//For sleep mode
 volatile int f_wdt = 1;
 int counter = 0;
 int packetCounter = 0;
-int nRainIn = A0;
-int nRainDigitalIn = 4;
-int sensorVCC = 9;
+//For rain sensor
+int nRainIn = A0; //Analog reading pin
+int nRainDigitalIn = 4; //Digital reading pin
+int sensorVCC = 9; //Power pin to sensor
 int nRainVal;
 boolean bIsRaining = false;
 String strRaining;
+//RGB Led pin
 int redPin = 6;
 int greenPin = 5;
 int bluePin = 3;
@@ -26,10 +34,19 @@ int bluePin = 3;
 #ifdef SENS1
 struct package
 {
-        int L=1501; // Detta är sändarens id nr
-        int M=0; // Detta är regnfuktighet (Räknas sen ut i huvudenheten)
-        int N=0; //Detta är om det regnar
-        float O=1; //Detta är volten
+        int L=1501; // The sensor id number
+        int M=0; // How wet the rain is
+        int N=0; //If it's raining
+        float O=1; //Battery volt
+};
+#endif
+#ifdef SENS2
+struct package
+{
+        int L=1502; // The sensor id number
+        int M=0; // How wet the rain is
+        int N=0; //If it's raining
+        float O=1; //Battery volt
 };
 #endif
 
@@ -83,10 +100,10 @@ void counterHandler()
         // Increment the sleep counter
         counter++;
 
-        // Should be 75 for 10 minutes (75 * 8 = 600 seconds = 10 minutes)
+        // Should be 225 for 30 minutes (225 * 8 = 1800 seconds = 30 minutes)
         // Use 1 for debugging purposes
 
-        if(counter == 225) { //1 timme
+        if(counter == 225) { //Change checking time here
                 // Reset the counter to 0
                 counter = 0;
 
@@ -153,7 +170,7 @@ void setupRadio()
 
 void setupTermometer()
 {
-        //Inställningar för temp sensor
+        //Settings for rain sensor
         pinMode(nRainDigitalIn,INPUT);
   pinMode(sensorVCC, OUTPUT);
         digitalWrite(sensorVCC, LOW);
@@ -186,11 +203,11 @@ void setup() {
 void printVolts()
 {
         /*
-         * Denna funktion avläser batteriet och om det sjunker under önskad nivå så ska röd färg lysa på dioden. Lägg till printVolts() i loopen om ni vill använda batteri varnare.
+         * Checks the battery level and flashes red if low power.
          */
         //int sensorValue = analogRead(A2); //Via motstånd läser vi av hur många volt det är
         regn.O = readVcc ();
-        if (regn.O < 3200) //Ställ in lägsta nivå för larm av batteri.
+        if (regn.O < 3200) //In millivolt when we are going to warn on low power
         {
                 setColor(255, 0, 0);
                 delay(500);
@@ -208,9 +225,9 @@ void printVolts()
 }
 
 void raincheck() {
-  setColor(80, 0, 80); //Ändrar färgen på rgb till lila för avläsning
-        digitalWrite(sensorVCC, HIGH);   //Aktiverar ström till jordsensorn
-        delay(100); //För att säkerhetsställa att den har ström
+  setColor(80, 0, 80); //Change colour to purple
+        digitalWrite(sensorVCC, HIGH);   //Power the sensor up
+        delay(100); //Wait until we got power
         nRainVal = analogRead(nRainIn);
   bIsRaining = !(digitalRead(nRainDigitalIn));
   if(bIsRaining){
@@ -218,7 +235,7 @@ void raincheck() {
     regn.N = 1;
     regn.M = nRainVal;
     setColor(255, 0, 0);
-    delay(1000);
+    delay(100);
     setColor(0, 0, 0);
   }
   else{
@@ -226,10 +243,10 @@ void raincheck() {
     regn.N = 0;
     regn.M = nRainVal;
     setColor(0, 255, 0);
-    delay(1000);
+    delay(100);
     setColor(0, 0, 0);
   }
-  digitalWrite(sensorVCC, LOW); //Stänger av ström och väntar en sekund
+  digitalWrite(sensorVCC, LOW); //Closing the power off
 }
 
 void loop() {
@@ -238,7 +255,7 @@ void loop() {
   #endif
 
   raincheck();
-  myRadio.write(&regn, sizeof(regn));
+  myRadio.write(&regn, sizeof(regn)); //Sending the data
   
   enterSleep();
 }
