@@ -3,7 +3,6 @@
  * Use it with an pump or other water system
  * Define the sensor
  */
-#include <Arduino.h>
 #include <SPI.h>
 #include "nRF24L01.h"
 #include "RF24.h"
@@ -35,9 +34,6 @@ int greenPin = 5;
 int bluePin = 3;
 //Relay Pin
 int relaPin = 10;
-
-unsigned long lastConnectionTime = 0;                 // last time you connected to the server, in milliseconds
-const unsigned long postingInterval = 300000; // delay between updates, in milliseconds
 
 #define COMMON_ANODE //If you are using Common Anode RGB led (VCC instead of GND on RGB Led)
 
