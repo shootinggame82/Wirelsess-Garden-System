@@ -18,7 +18,6 @@ $counter = 0;
             echo '{"id": '.$row["id"].', "sensornr": '.$row["sensornr"].', "namn": "'.$row["namn"].'", "avlast": '.$row["avlast"].'}';
             if ($insert_stmt = $mysqli->prepare("UPDATE sensorer SET avlast = '0' WHERE id = ?")) {
                 $insert_stmt->bind_param('s', $row["id"]);
-                // Execute the prepared query.
                 if (! $insert_stmt->execute()) {
                     exit();
                 }
@@ -27,7 +26,6 @@ $counter = 0;
             echo '{"id": '.$row["id"].', "sensornr": '.$row["sensornr"].', "namn": "'.$row["namn"].'", "avlast": '.$row["avlast"].'},';
             if ($insert_stmt = $mysqli->prepare("UPDATE sensorer SET avlast = '0' WHERE id = ?")) {
                 $insert_stmt->bind_param('s', $row["id"]);
-                // Execute the prepared query.
                 if (! $insert_stmt->execute()) {
                     exit();
                 }
