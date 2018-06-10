@@ -3,11 +3,6 @@ include '../db.php';
 
 //Run this cronjob every secounds, this holds all the automation.
 
-//Set your locale here
-setlocale(LC_ALL, 'sv_SE', 'sv_SE.UTF-8');
-date_default_timezone_set('Europe/Stockholm');
-setlocale(LC_TIME, 'sv_SE', 'sv_SE.UTF-8');
-
 $idag = date("Y-m-d");
 $nu = date("H:i:s");
 $datum = date("Y-m-d", strtotime($idag));
@@ -21,7 +16,6 @@ $sql = "SELECT * FROM uppgifter WHERE id = '1'";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows == 1) {
-    // Räkna ihop antalet reserverade stolar
     while ($row = $result->fetch_assoc()) {
         $pumptid= $row["pumptid"];
         $fukttid= $row["fukttid"];
