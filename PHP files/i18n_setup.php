@@ -10,7 +10,7 @@ function valid($locale)
 }
 
 //setting the source/default locale, for informational purposes
-$lang = 'sv_SE';
+$lang = 'en_US';
 
 if (isset($_GET['lang']) && valid($_GET['lang'])) {
     // the locale can be changed through the query-string
