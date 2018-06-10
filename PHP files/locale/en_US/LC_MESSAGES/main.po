@@ -1,0 +1,1915 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Garden System 1.1\n"
+"POT-Creation-Date: 2018-06-09 18:35+0200\n"
+"PO-Revision-Date: 2018-06-09 18:37+0200\n"
+"Last-Translator: Andreas Olsson <andreas@afosys-support.com>\n"
+"Language-Team: Andreas Olsson\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.8\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: adderapump.php\n"
+"X-Poedit-SearchPath-1: adderaregn.php\n"
+"X-Poedit-SearchPath-2: adderasensor.php\n"
+"X-Poedit-SearchPath-3: adderavilt.php\n"
+"X-Poedit-SearchPath-4: adderaviltsiren.php\n"
+"X-Poedit-SearchPath-5: adderazon.php\n"
+"X-Poedit-SearchPath-6: anvandare.php\n"
+"X-Poedit-SearchPath-7: check.php\n"
+"X-Poedit-SearchPath-8: db.php\n"
+"X-Poedit-SearchPath-9: index.php\n"
+"X-Poedit-SearchPath-10: loggain.php\n"
+"X-Poedit-SearchPath-11: login.php\n"
+"X-Poedit-SearchPath-12: logout.php\n"
+"X-Poedit-SearchPath-13: luftstatistik.php\n"
+"X-Poedit-SearchPath-14: pump.php\n"
+"X-Poedit-SearchPath-15: redigerapump.php\n"
+"X-Poedit-SearchPath-16: redigeraregn.php\n"
+"X-Poedit-SearchPath-17: redigerasensor.php\n"
+"X-Poedit-SearchPath-18: redigeravilt.php\n"
+"X-Poedit-SearchPath-19: redigeraviltsiren.php\n"
+"X-Poedit-SearchPath-20: redigerazon.php\n"
+"X-Poedit-SearchPath-21: redpump.php\n"
+"X-Poedit-SearchPath-22: redregn.php\n"
+"X-Poedit-SearchPath-23: redsensor.php\n"
+"X-Poedit-SearchPath-24: redvilt.php\n"
+"X-Poedit-SearchPath-25: redviltsiren.php\n"
+"X-Poedit-SearchPath-26: redzon.php\n"
+"X-Poedit-SearchPath-27: regn.php\n"
+"X-Poedit-SearchPath-28: sensorer.php\n"
+"X-Poedit-SearchPath-29: sensorstatistik.php\n"
+"X-Poedit-SearchPath-30: statistik.php\n"
+"X-Poedit-SearchPath-31: timerpump.php\n"
+"X-Poedit-SearchPath-32: timervilt.php\n"
+"X-Poedit-SearchPath-33: uppgifter.php\n"
+"X-Poedit-SearchPath-34: varden.php\n"
+"X-Poedit-SearchPath-35: vilt.php\n"
+"X-Poedit-SearchPath-36: zon.php\n"
+"X-Poedit-SearchPath-37: zonloggadd.php\n"
+"X-Poedit-SearchPath-38: zonloggar.php\n"
+"X-Poedit-SearchPath-39: zonloggedit.php\n"
+"X-Poedit-SearchPath-40: zonpump.php\n"
+"X-Poedit-SearchPath-41: zonpumpar.php\n"
+"X-Poedit-SearchPath-42: zonregn.php\n"
+"X-Poedit-SearchPath-43: zonregnar.php\n"
+"X-Poedit-SearchPath-44: zonsensor.php\n"
+"X-Poedit-SearchPath-45: zonsensorer.php\n"
+"X-Poedit-SearchPath-46: zonvilt.php\n"
+"X-Poedit-SearchPath-47: zonviltar.php\n"
+"X-Poedit-SearchPath-48: ajax/funktioner.js.php\n"
+"X-Poedit-SearchPath-49: assets/js/anvandare.js.php\n"
+"X-Poedit-SearchPath-50: assets/js/pumptimer.js.php\n"
+"X-Poedit-SearchPath-51: assets/js/redigerapump.js.php\n"
+"X-Poedit-SearchPath-52: assets/js/redigeraregn.js.php\n"
+"X-Poedit-SearchPath-53: assets/js/redigerasensor.js.php\n"
+"X-Poedit-SearchPath-54: assets/js/redigeravilt.js.php\n"
+"X-Poedit-SearchPath-55: assets/js/redigeraviltsiren.js.php\n"
+"X-Poedit-SearchPath-56: assets/js/redigerazon.js.php\n"
+"X-Poedit-SearchPath-57: assets/js/script.js.php\n"
+"X-Poedit-SearchPath-58: assets/js/viltimer.js.php\n"
+"X-Poedit-SearchPath-59: assets/js/zonloggadd.js.php\n"
+"X-Poedit-SearchPath-60: assets/js/zonloggar.js.php\n"
+"X-Poedit-SearchPath-61: assets/js/zonpump.js.php\n"
+"X-Poedit-SearchPath-62: assets/js/zonregnar.js.php\n"
+"X-Poedit-SearchPath-63: assets/js/zonsensorer.js.php\n"
+"X-Poedit-SearchPath-64: assets/js/zonvilt.js.php\n"
+"X-Poedit-SearchPath-65: assets/pages/form-validation/anvandare.js.php\n"
+"X-Poedit-SearchPath-66: assets/pages/form-validation/form-validation.js.php\n"
+"X-Poedit-SearchPath-67: assets/pages/form-validation/pump.js.php\n"
+"X-Poedit-SearchPath-68: assets/pages/form-validation/pumptimer.js.php\n"
+"X-Poedit-SearchPath-69: assets/pages/form-validation/redpump.js.php\n"
+"X-Poedit-SearchPath-70: assets/pages/form-validation/redregn.js.php\n"
+"X-Poedit-SearchPath-71: assets/pages/form-validation/redsensor.js.php\n"
+"X-Poedit-SearchPath-72: assets/pages/form-validation/redvilt.js.php\n"
+"X-Poedit-SearchPath-73: assets/pages/form-validation/redviltsiren.js.php\n"
+"X-Poedit-SearchPath-74: assets/pages/form-validation/redzon.js.php\n"
+"X-Poedit-SearchPath-75: assets/pages/form-validation/regn.js.php\n"
+"X-Poedit-SearchPath-76: assets/pages/form-validation/uppgifter.js.php\n"
+"X-Poedit-SearchPath-77: assets/pages/form-validation/vilt.js.php\n"
+"X-Poedit-SearchPath-78: assets/pages/form-validation/viltsiren.js.php\n"
+"X-Poedit-SearchPath-79: assets/pages/form-validation/vilttimer.js.php\n"
+"X-Poedit-SearchPath-80: assets/pages/form-validation/zon.js.php\n"
+"X-Poedit-SearchPath-81: assets/pages/form-validation/zonloggadd.js.php\n"
+"X-Poedit-SearchPath-82: assets/pages/form-validation/zonpump.js.php\n"
+"X-Poedit-SearchPath-83: assets/pages/form-validation/zonregn.js.php\n"
+"X-Poedit-SearchPath-84: assets/pages/form-validation/zonsensor.js.php\n"
+"X-Poedit-SearchPath-85: assets/pages/form-validation/zonvilt.js.php\n"
+"X-Poedit-SearchPath-86: assets/pages/dashboard/zon.js.php\n"
+"X-Poedit-SearchPath-87: include/header.php\n"
+"X-Poedit-SearchPath-88: login.php\n"
+"X-Poedit-SearchPathExcluded-0: bower_components\n"
+"X-Poedit-SearchPathExcluded-1: assets/pages/wysiwyg-editor\n"
+
+#: adderapump.php:21 include/header.php:129 include/header.php:214
+msgid "Lägg till pump"
+msgstr "Add pump"
+
+#: adderapump.php:65 adderapump.php:76 zonpump.php:112
+msgid "Addera pump"
+msgstr "Create pump"
+
+#: adderapump.php:73 include/header.php:203 redigerapump.php:72
+#: redigerapump.php:75 redpump.php:93 timerpump.php:73 zonpumpar.php:113
+msgid "Pumpar"
+msgstr "Waterpump"
+
+#: adderapump.php:95
+msgid "Lägg till en ny pump"
+msgstr "Add a new pump"
+
+#: adderapump.php:96
+msgid ""
+"Här kan du lägga till en ny bevattnings pump. Dessa sköter bevattningen och "
+"kopplas till jord sensorerna för att sköta bevattning automatiskt, eller "
+"till zoner för att manuellt starta bevattning."
+msgstr ""
+"Here you can add a new water pump. This will handle the watering and can be "
+"connected to the soil sensors to handle auto watering, or to zones to start "
+"manual watering."
+
+#: adderapump.php:101 timerpump.php:213
+msgid "Pumpens ID Nummer"
+msgstr "ID Number"
+
+#: adderapump.php:103
+msgid "Mellan 2501 - 3000"
+msgstr "Between 2501 - 3000"
+
+#: adderapump.php:108 redpump.php:122
+msgid "Pumpens Namn"
+msgstr "Pump name"
+
+#: adderapump.php:110 adderaregn.php:110 adderasensor.php:110
+#: adderavilt.php:109 adderaviltsiren.php:109 redpump.php:124 redregn.php:124
+#: redsensor.php:157 redvilt.php:127 redviltsiren.php:126 redzon.php:126
+#: timerpump.php:237 uppgifter.php:163
+msgid "Ett lämpligt namn"
+msgstr "A name"
+
+#: adderapump.php:118 adderaregn.php:118 adderasensor.php:141
+#: adderavilt.php:139 adderaviltsiren.php:116 adderazon.php:116
+#: anvandare.php:152 redpump.php:132 redregn.php:132 redsensor.php:196
+#: redvilt.php:166 redviltsiren.php:135 redzon.php:141 timerpump.php:330
+#: timervilt.php:330 uppgifter.php:259 zonloggadd.php:127 zonloggedit.php:139
+#: zonpump.php:164 zonregn.php:164 zonsensor.php:163 zonvilt.php:163
+msgid "Skicka"
+msgstr "Send"
+
+#: adderaregn.php:21 include/header.php:157 include/header.php:309
+msgid "Lägg till regnsensor"
+msgstr "Add rain sensor"
+
+#: adderaregn.php:65 adderaregn.php:76 zonregn.php:112
+msgid "Addera regnsensor"
+msgstr "Create rain sensor"
+
+#: adderaregn.php:73 redigeraregn.php:72 redigeraregn.php:75 redregn.php:93
+#: zonregnar.php:111
+msgid "Regnsensorer"
+msgstr "Rain sensors"
+
+#: adderaregn.php:95
+msgid "Lägg till en ny regnsensor"
+msgstr "Add a new rain sensor"
+
+#: adderaregn.php:96
+msgid ""
+"Här kan du lägga till en ny regnsensor. Dom håller koll på om det har regnat "
+"den senaste halvtimmen, om så fallet så körs ej bevattning."
+msgstr ""
+"Here you can add a new rain sensor. They check if it has been raining for "
+"the last half hour, if so then they will not watering your plants."
+
+#: adderaregn.php:101 adderasensor.php:101 adderavilt.php:100
+msgid "Sensorns ID Nummer"
+msgstr "ID Number"
+
+#: adderaregn.php:103
+msgid "Mellan 1501 - 2000"
+msgstr "Between 1501 - 2000"
+
+#: adderaregn.php:108 adderasensor.php:108 adderavilt.php:107 redregn.php:122
+#: redsensor.php:155
+msgid "Sensorns Namn"
+msgstr "Sensor Name"
+
+#: adderasensor.php:21 include/header.php:115 include/header.php:187
+#: zon.php:320
+msgid "Lägg till sensor"
+msgstr "Add soil sensor"
+
+#: adderasensor.php:65 adderasensor.php:76 zonsensor.php:111
+msgid "Addera sensor"
+msgstr "Create soil sensor"
+
+#: adderasensor.php:73 include/header.php:176 index.php:185 redsensor.php:96
+#: sensorstatistik.php:112 zon.php:250
+msgid "Sensorer"
+msgstr "Soil Sensors"
+
+#: adderasensor.php:95
+msgid "Lägg till en ny sensor"
+msgstr "Add a new soil sensor"
+
+#: adderasensor.php:96
+msgid ""
+"Här kan du lägga till en ny jord sensor till systemet. Ange sensorns nummer "
+"namn och koppla en pump till den om så önskas. Utan pump så kan ej "
+"automatisk bevattning användas."
+msgstr ""
+"Here you can add a new soil sensor to the system. Enter the sensors number, "
+"name and connect a pump to it if you wish.\n"
+"Without a pump you can’t have auto watering."
+
+#: adderasensor.php:103
+msgid "Mellan 4501 - 5000"
+msgstr "Between 4501 - 5000"
+
+#: adderasensor.php:115 redigerasensor.php:102 timerpump.php:105
+#: zonpump.php:139
+msgid "Pump"
+msgstr "Waterpump"
+
+#: adderasensor.php:118
+msgid "Ingen pump"
+msgstr "No pump"
+
+#: adderavilt.php:20
+msgid "Lägg till vilt sensor"
+msgstr "Add animal sensor"
+
+#: adderavilt.php:64 adderavilt.php:75
+msgid "Addera vilt"
+msgstr "Create animal sensor"
+
+#: adderavilt.php:72 adderaviltsiren.php:72 include/header.php:241
+#: redigeravilt.php:72 redigeraviltsiren.php:72 redvilt.php:96
+#: redviltsiren.php:95 timervilt.php:73 timervilt.php:105
+msgid "Vilt"
+msgstr "Animal sensors"
+
+#: adderavilt.php:94
+msgid "Lägg till en ny vilt sensor"
+msgstr "Add a new animal sensor"
+
+#: adderavilt.php:95
+msgid ""
+"Vilt sensorn reagerar på rörelse och larmar och rörelse uppstår. Lägg till "
+"en ny vilt sensor här som sen kopplas till zoner."
+msgstr ""
+"Animal sensors reacts on movements and alarms if something is in the area. "
+"Add a new animal sensor here and then connect it to zones."
+
+#: adderavilt.php:102
+msgid "Mellan 6501 - 7000"
+msgstr "Between 6501 - 7000"
+
+#: adderavilt.php:114 redvilt.php:132
+msgid "Vilt siren"
+msgstr "Animal siren"
+
+#: adderaviltsiren.php:20 include/header.php:252
+msgid "Lägg till vilt siren"
+msgstr "Add animal siren"
+
+#: adderaviltsiren.php:64
+msgid "Addera viltsiren"
+msgstr "Create animal siren"
+
+#: adderaviltsiren.php:75
+msgid "Addera vilt siren"
+msgstr "Create animal siren"
+
+#: adderaviltsiren.php:94
+msgid "Lägg till en ny vilt siren"
+msgstr "Add a new animal siren"
+
+#: adderaviltsiren.php:95
+msgid ""
+"Vilt siren är en siren som aktiveras om vilt sensorerna är aktiv och "
+"registrerar rörelse."
+msgstr ""
+"Animal siren is an siren that activates if the animal sensors is active and "
+"registrate movements."
+
+#: adderaviltsiren.php:100
+msgid "Siren ID Nummer"
+msgstr "ID Number"
+
+#: adderaviltsiren.php:102
+msgid "Mellan 8501 - 7000"
+msgstr "Between 8501 - 9000"
+
+#: adderaviltsiren.php:107
+msgid "Siren Namn"
+msgstr "Siren Name"
+
+#: adderazon.php:20 include/header.php:336
+msgid "Lägg till zon"
+msgstr "Add zone"
+
+#: adderazon.php:64 adderazon.php:75
+msgid "Addera zon"
+msgstr "Create zone"
+
+#: adderazon.php:72 include/header.php:325 redigerasensor.php:72
+#: zonloggar.php:100 zonpumpar.php:110 zonregnar.php:108 zonsensorer.php:108
+#: zonviltar.php:108
+msgid "Zoner"
+msgstr "Zones"
+
+#: adderazon.php:94
+msgid "Lägg till en ny zon"
+msgstr "Add a new zone"
+
+#: adderazon.php:95
+msgid ""
+"Zoner är där du delar upp dina olika sensorer i grupper för att kunna se "
+"statistik och sköta bevattning m.m. Sensorer och sånt lägger du till sedan "
+"när du är inne i zonen."
+msgstr ""
+"Zones is where you split up your sensors in to groups, to se static and "
+"handle watering etc. Sensors and other modules can you add inside the zone."
+
+#: adderazon.php:100
+msgid "Zon namn"
+msgstr "Zone name"
+
+#: adderazon.php:102
+msgid "Ex: Tomat odlingen"
+msgstr "Like: Potatos"
+
+#: adderazon.php:107 redigerazon.php:102 redzon.php:131
+msgid "Beskrivning"
+msgstr "Description"
+
+#: adderazon.php:109 redzon.php:133
+msgid "En lämplig beskrivning"
+msgstr "A good description"
+
+#: ajax/funktioner.js.php:20
+msgid "Nattläge aktiverat"
+msgstr "Night mode activated"
+
+#: ajax/funktioner.js.php:21
+msgid "Nattläge är aktiverat så ingen pumpautomatik eller timer kommer köras."
+msgstr "Night mode is activated so no water pumps or timer will be activated."
+
+#: ajax/funktioner.js.php:37
+msgid "Låg batteri nivå i jordsensor."
+msgstr "Low battery level in soil sensor."
+
+#: ajax/funktioner.js.php:38 ajax/funktioner.js.php:57
+#: ajax/funktioner.js.php:76
+msgid "Det börjar bli låg batteri nivå i"
+msgstr "There is low battery level in"
+
+#: ajax/funktioner.js.php:56
+msgid "Låg batteri nivå i regnsensor."
+msgstr "Low battery level in rain sensor."
+
+#: ajax/funktioner.js.php:75
+msgid "Låg batteri nivå i viltsensor."
+msgstr "Low battery level in animal sensor."
+
+#: ajax/funktioner.js.php:118
+msgid "Det har regnat"
+msgstr "It has raining"
+
+#: ajax/funktioner.js.php:119
+msgid ""
+"Det har eller så regnar det just nu så ingen automatiskt bevattning kommer "
+"att köras."
+msgstr "It has or it’s raining now so no auto watering will be running."
+
+#: ajax/funktioner.js.php:147
+msgid "Stöd bevattning"
+msgstr "Extra watering"
+
+#: ajax/funktioner.js.php:148
+msgid ""
+"Det är extra varmt idag så stöd bevattning i en minut varannan timme kommer "
+"att köras."
+msgstr "It’s hot today so extra watering in one minute every two hours."
+
+#: ajax/funktioner.js.php:169
+msgid "Extra vattning behövs"
+msgstr "Extra watering needed"
+
+#: ajax/funktioner.js.php:170
+msgid ""
+"Det är extra varmt idag så stöd bevattning behövs så inte odlingen torkar ut."
+msgstr "It’s extra hot today so extra watering is needed for your plants."
+
+#: ajax/funktioner.js.php:190 assets/pages/dashboard/zon.js.php:27
+msgid "Bevattnings pump aktiverad"
+msgstr "Watering pump is activated"
+
+#: ajax/funktioner.js.php:191 assets/pages/dashboard/zon.js.php:28
+#: assets/pages/dashboard/zon.js.php:36
+msgid "Bevattning"
+msgstr "Watering pump"
+
+#: ajax/funktioner.js.php:191 assets/pages/dashboard/zon.js.php:28
+msgid "är aktiverad och körs nu."
+msgstr "is activated and running now."
+
+#: ajax/funktioner.js.php:210 assets/pages/dashboard/zon.js.php:72
+msgid "Viltvanare aktiverad"
+msgstr "Animal sensor activated"
+
+#: ajax/funktioner.js.php:211 assets/pages/dashboard/zon.js.php:73
+#: assets/pages/dashboard/zon.js.php:81
+msgid "Viltvanare"
+msgstr "Animal sensor"
+
+#: ajax/funktioner.js.php:211 assets/pages/dashboard/zon.js.php:73
+msgid "är aktiverad och redo att larma."
+msgstr "is activated and ready to alarm."
+
+#: anvandare.php:20 anvandare.php:65 anvandare.php:76 anvandare.php:94
+#: anvandare.php:102 anvandare.php:130 include/header.php:374
+msgid "Användare"
+msgstr "Users"
+
+#: anvandare.php:73 include/header.php:353
+msgid "Övrigt"
+msgstr "Other"
+
+#: anvandare.php:95
+msgid ""
+"Här ser du alla användare som är tillagd i systemet. Dessa har rätt att "
+"logga in och sköta odligen. Nedan för kan du lägga till flera."
+msgstr ""
+"Here you see all users that are added to the system. These have the right to "
+"login and handle the system. Below you can add more."
+
+#: anvandare.php:103 anvandare.php:117 redigerapump.php:119
+#: redigeraregn.php:119 redigerasensor.php:140 redigeravilt.php:118
+#: redigeraviltsiren.php:118 redigerazon.php:119 timerpump.php:106
+#: timerpump.php:192 timervilt.php:106 timervilt.php:192 zonloggar.php:148
+#: zonpumpar.php:140 zonpumpar.php:164 zonregnar.php:141 zonregnar.php:187
+#: zonsensorer.php:141 zonsensorer.php:176 zonviltar.php:139 zonviltar.php:167
+msgid "Radera"
+msgstr "Delete"
+
+#: anvandare.php:131
+msgid ""
+"Här kan du lägga till nya användare till systemet. Ange bara användarnamn "
+"och lösenord små bokstäver utan åäö och inga konstiga tecken på både "
+"användarnamn och lösenord, INGA mellanslag"
+msgstr ""
+"Here you can add more users to the system. Enter a username and password "
+"with small letters and no strange characters on username and password, NO "
+"spaces"
+
+#: anvandare.php:136
+msgid "Användarnamn"
+msgstr "Username"
+
+#: anvandare.php:138
+msgid "Ett lämpligt användarnamn"
+msgstr "A username"
+
+#: anvandare.php:143 loggain.php:139
+msgid "Lösenord"
+msgstr "Password"
+
+#: anvandare.php:145
+msgid "Ett lämpligt lösenord"
+msgstr "A password"
+
+#: assets/js/anvandare.js.php:3
+msgid "Vill du ta bort denna användare?"
+msgstr "Do you want to remove this user?"
+
+#: assets/js/anvandare.js.php:18 assets/js/pumptimer.js.php:18
+#: assets/js/redigerapump.js.php:18 assets/js/redigeraregn.js.php:18
+#: assets/js/redigerasensor.js.php:18 assets/js/redigeravilt.js.php:18
+#: assets/js/redigeraviltsiren.js.php:18 assets/js/redigerazon.js.php:18
+#: assets/js/script.js.php:20 assets/js/viltimer.js.php:18
+#: assets/js/zonloggar.js.php:19 assets/js/zonpump.js.php:19
+#: assets/js/zonregnar.js.php:19 assets/js/zonsensorer.js.php:19
+#: assets/js/zonvilt.js.php:19 assets/pages/dashboard/zon.js.php:19
+#: assets/pages/dashboard/zon.js.php:64 assets/pages/dashboard/zon.js.php:107
+msgid "Vi har tekniska problem med databasen just nu, kontakta admin."
+msgstr "There is problem with the database right now, contact admin."
+
+#: assets/js/anvandare.js.php:20 assets/js/pumptimer.js.php:20
+#: assets/js/redigerapump.js.php:20 assets/js/redigeraregn.js.php:20
+#: assets/js/redigerasensor.js.php:20 assets/js/redigeravilt.js.php:20
+#: assets/js/redigeraviltsiren.js.php:20 assets/js/redigerazon.js.php:20
+#: assets/js/script.js.php:22 assets/js/viltimer.js.php:20
+#: assets/js/zonloggar.js.php:21 assets/js/zonpump.js.php:21
+#: assets/js/zonregnar.js.php:21 assets/js/zonsensorer.js.php:21
+#: assets/js/zonvilt.js.php:21 assets/pages/dashboard/zon.js.php:21
+#: assets/pages/dashboard/zon.js.php:66 assets/pages/dashboard/zon.js.php:109
+msgid "Det är problem med att skicka just nu, kontakta admin."
+msgstr "There is problem to send right now, contact admin."
+
+#: assets/js/anvandare.js.php:29
+msgid "Användaren har inte tagits bort"
+msgstr "The user has not been removed"
+
+#: assets/js/pumptimer.js.php:29 assets/js/viltimer.js.php:29
+msgid "Timern har inte tagits bort"
+msgstr "Timer has not been removed"
+
+#: assets/js/pumptimer.js.php:35 assets/js/viltimer.js.php:35
+msgid "Vill du ta redigera denna timer?"
+msgstr "Do you want to edit this timer?"
+
+#: assets/js/pumptimer.js.php:101 assets/js/viltimer.js.php:101
+msgid "Timern kommer ej att redigeras."
+msgstr "The timer will not be edited."
+
+#: assets/js/pumptimer.js.php:3 assets/js/viltimer.js.php:3
+msgid "Vill du ta bort denna timer?"
+msgstr "Do you want to remove this timer?"
+
+#: assets/js/redigerapump.js.php:3
+msgid ""
+"Vill du ta bort denna pump? Den kommer även att försvinna ifrån zonerna och "
+"sensorer blir pump lösa!"
+msgstr ""
+"Do you want to remove this pump? It will also be remove from zones, and "
+"sensors will be without a pump!"
+
+#: assets/js/redigerapump.js.php:23
+msgid "Pumpen är nu borttagen och vi uppdaterar sidan."
+msgstr "The pump is now removed and the page will be updated."
+
+#: assets/js/redigerapump.js.php:29
+msgid "Pumpen har INTE tagist bort!"
+msgstr "The pump has NOT been removed!"
+
+#: assets/js/redigerapump.js.php:35
+msgid "Vill du göra ändringar i denna pump?"
+msgstr "Do you want to edit this pump?"
+
+#: assets/js/redigerapump.js.php:39 assets/js/redigeraregn.js.php:39
+#: assets/js/redigerasensor.js.php:39 assets/js/redigeravilt.js.php:39
+#: assets/js/redigeraviltsiren.js.php:39 assets/js/redigerazon.js.php:39
+msgid "Inga ändringar kommer att utföras!"
+msgstr "No changes will be done!"
+
+#: assets/js/redigeraregn.js.php:3
+msgid ""
+"Vill du ta bort denna regnsensor? Den kommer även att försvinna ifrån "
+"zonerna och alla värden försvinner!"
+msgstr ""
+"Do you want to remove this rain sensor? It will also be removed from zones "
+"and all statics will be removed!"
+
+#: assets/js/redigeraregn.js.php:23
+msgid "Regnsensorn är nu borttagen och vi uppdaterar sidan."
+msgstr "Rain sensor is now removed and we will update the page."
+
+#: assets/js/redigeraregn.js.php:29
+msgid "Regnsensorn har INTE tagist bort!"
+msgstr "Rain sensor has NOT been removed!"
+
+#: assets/js/redigeraregn.js.php:35 assets/js/redigerasensor.js.php:35
+#: assets/js/redigeravilt.js.php:35
+msgid "Vill du göra ändringar i denna sensor?"
+msgstr "Do you want to change in this sensor?"
+
+#: assets/js/redigerasensor.js.php:3 assets/js/redigeravilt.js.php:3
+msgid ""
+"Vill du ta bort denna sensor? Den kommer även att försvinna ifrån zonerna "
+"och statistiken kommer att försvinna!"
+msgstr ""
+"Do you want to remove this sensor? It will also be removed from zones and "
+"the statistic will be removed!"
+
+#: assets/js/redigerasensor.js.php:23 assets/js/redigeravilt.js.php:23
+msgid "Sensorn är nu borttagen och vi uppdaterar sidan."
+msgstr "The sensor is now removed and we will update the page."
+
+#: assets/js/redigerasensor.js.php:29 assets/js/redigeravilt.js.php:29
+msgid "Sensorn har INTE tagist bort!"
+msgstr "The sensor has NOT been removed!"
+
+#: assets/js/redigeraviltsiren.js.php:3
+msgid ""
+"Vill du ta bort denna siren? Den kommer även att försvinna ifrån vilt "
+"sensorerna och dom kommer ej kunna användas!"
+msgstr ""
+"Do you want to remove this siren? It will also be removed from animal "
+"sensors and they will not be able to work!"
+
+#: assets/js/redigeraviltsiren.js.php:23
+msgid "Sirenen är nu borttagen och vi uppdaterar sidan."
+msgstr "Siren is now removed and we will update the page."
+
+#: assets/js/redigeraviltsiren.js.php:29
+msgid "Sirenen har INTE tagist bort!"
+msgstr "Siren has NOT been removed!"
+
+#: assets/js/redigeraviltsiren.js.php:35
+msgid "Vill du göra ändringar i denna siren?"
+msgstr "Do you need to make changes in this siren?"
+
+#: assets/js/redigerazon.js.php:3
+msgid "Vill du ta bort denna zon?"
+msgstr "Do you want to remove this zone?"
+
+#: assets/js/redigerazon.js.php:23
+msgid "Zonen är nu borttagen och vi uppdaterar sidan."
+msgstr "The zone is removed and we will update the page."
+
+#: assets/js/redigerazon.js.php:29
+msgid "Zonen har INTE tagist bort!"
+msgstr "The zone has NOT been removed!"
+
+#: assets/js/redigerazon.js.php:35
+msgid "Vill du göra ändringar i denna zon?"
+msgstr "Do you need to make changes in this zone?"
+
+#: assets/js/script.js.php:5
+msgid "Du är på väg att starta om styrenheten, är du helt säker på det?"
+msgstr ""
+"You are on your way to restart the base system, do you want to do that?"
+
+#: assets/js/script.js.php:26
+msgid "Styrenheten kommer att startas om nu."
+msgstr "The base system will now be restarted."
+
+#: assets/js/script.js.php:31
+msgid "Styrenheten har INTE startats om."
+msgstr "Base system has NOT been restarted."
+
+#: assets/js/zonloggadd.js.php:14
+#: assets/pages/form-validation/zonloggadd.js.php:69
+#: assets/pages/form-validation/zonpump.js.php:69
+msgid "Den angivna pumpen finns redan med i zonen."
+msgstr "This pump already exist in the zone."
+
+#: assets/js/zonloggadd.js.php:16
+#: assets/pages/form-validation/anvandare.js.php:68
+#: assets/pages/form-validation/form-validation.js.php:90
+#: assets/pages/form-validation/pump.js.php:90
+#: assets/pages/form-validation/pumptimer.js.php:80
+#: assets/pages/form-validation/redpump.js.php:71
+#: assets/pages/form-validation/redregn.js.php:71
+#: assets/pages/form-validation/redsensor.js.php:71
+#: assets/pages/form-validation/redvilt.js.php:71
+#: assets/pages/form-validation/redviltsiren.js.php:71
+#: assets/pages/form-validation/redzon.js.php:71
+#: assets/pages/form-validation/regn.js.php:90
+#: assets/pages/form-validation/uppgifter.js.php:71
+#: assets/pages/form-validation/vilt.js.php:90
+#: assets/pages/form-validation/viltsiren.js.php:90
+#: assets/pages/form-validation/vilttimer.js.php:80
+#: assets/pages/form-validation/zon.js.php:76
+#: assets/pages/form-validation/zonloggadd.js.php:71
+#: assets/pages/form-validation/zonpump.js.php:71
+#: assets/pages/form-validation/zonregn.js.php:71
+#: assets/pages/form-validation/zonsensor.js.php:71
+#: assets/pages/form-validation/zonvilt.js.php:71
+msgid "Databas fel"
+msgstr "Database error"
+
+#: assets/js/zonloggadd.js.php:18
+#: assets/pages/form-validation/anvandare.js.php:70
+#: assets/pages/form-validation/form-validation.js.php:92
+#: assets/pages/form-validation/pump.js.php:92
+#: assets/pages/form-validation/pumptimer.js.php:82
+#: assets/pages/form-validation/redpump.js.php:73
+#: assets/pages/form-validation/redregn.js.php:73
+#: assets/pages/form-validation/redsensor.js.php:73
+#: assets/pages/form-validation/redvilt.js.php:73
+#: assets/pages/form-validation/redviltsiren.js.php:73
+#: assets/pages/form-validation/redzon.js.php:73
+#: assets/pages/form-validation/regn.js.php:92
+#: assets/pages/form-validation/uppgifter.js.php:73
+#: assets/pages/form-validation/vilt.js.php:92
+#: assets/pages/form-validation/viltsiren.js.php:92
+#: assets/pages/form-validation/vilttimer.js.php:82
+#: assets/pages/form-validation/zon.js.php:78
+#: assets/pages/form-validation/zonloggadd.js.php:73
+#: assets/pages/form-validation/zonpump.js.php:73
+#: assets/pages/form-validation/zonregn.js.php:73
+#: assets/pages/form-validation/zonsensor.js.php:73
+#: assets/pages/form-validation/zonvilt.js.php:73
+msgid "Nått är fel i formuläret"
+msgstr "Something is wrong in the form"
+
+#: assets/js/zonloggadd.js.php:21
+#: assets/pages/form-validation/zonloggadd.js.php:76
+msgid "Din logg är nu skapad och du kan läsa, skriva ut eller ändra den."
+msgstr "Your long is now created and you can read, print or change it."
+
+#: assets/js/zonloggar.js.php:3
+msgid "Vill du ta bort denna zonlogg?"
+msgstr "Do you want to remove this zone log?"
+
+#: assets/js/zonloggar.js.php:30
+msgid "Loggen har inte tagits bort."
+msgstr "The log has not been removed."
+
+#: assets/js/zonpump.js.php:3
+msgid "Vill du ta bort denna pump?"
+msgstr "Do you want to remove this pump?"
+
+#: assets/js/zonpump.js.php:30
+msgid "Pumpen har inte tagits bort"
+msgstr "The pump has not been removed"
+
+#: assets/js/zonregnar.js.php:3 assets/js/zonsensorer.js.php:3
+msgid "Vill du ta bort denna sensor?"
+msgstr "Do you want to remove this sensor?"
+
+#: assets/js/zonregnar.js.php:30 assets/js/zonsensorer.js.php:30
+msgid "Sensorn har inte tagits bort"
+msgstr "The sensor has not been removed"
+
+#: assets/js/zonvilt.js.php:3
+msgid "Vill du ta bort denna vilt sensor?"
+msgstr "Do you want to remove this animal sensor?"
+
+#: assets/js/zonvilt.js.php:30
+msgid "Vilt sensorn har inte tagits bort"
+msgstr "Animal sensor has not been removed"
+
+#: assets/pages/dashboard/zon.js.php:35
+msgid "Bevattnings pump avstängd"
+msgstr "Watering pump is inactivated"
+
+#: assets/pages/dashboard/zon.js.php:36
+msgid "är avstängd och stängs av."
+msgstr "is inactivated and will be closed."
+
+#: assets/pages/dashboard/zon.js.php:80
+msgid "Viltvanare avstängd"
+msgstr "Animal sensor inactivated"
+
+#: assets/pages/dashboard/zon.js.php:81
+msgid "är avstängd och kommer ej att larma."
+msgstr "is closed and will no longer alarm."
+
+#: assets/pages/dashboard/zon.js.php:112
+msgid "Sirenen startar strax, stängs av automatiskt."
+msgstr "The siren will start soon, and stops automatic."
+
+#: assets/pages/dashboard/zon.js.php:153
+msgid "Jordsensor avläst"
+msgstr "Soil Sensors reader"
+
+#: assets/pages/dashboard/zon.js.php:154
+msgid "Jordsensor"
+msgstr "Soil Sensor"
+
+#: assets/pages/dashboard/zon.js.php:154
+msgid "har blivit avläst nyligen."
+msgstr "has sent some statics."
+
+#: assets/pages/dashboard/zon.js.php:142 assets/pages/dashboard/zon.js.php:131
+#: index.php:273 index.php:304 zon.php:364 zon.php:402
+msgid "Aktivera"
+msgstr "Activate"
+
+#: assets/pages/dashboard/zon.js.php:140 assets/pages/dashboard/zon.js.php:129
+#: index.php:271 index.php:302 zon.php:362 zon.php:400
+msgid "Inaktivera"
+msgstr "Inactivate"
+
+#: assets/pages/form-validation/anvandare.js.php:66
+msgid "Den angivna användaren finns redan med i systemet."
+msgstr "The user is already in the system."
+
+#: assets/pages/form-validation/anvandare.js.php:74
+msgid "Användaren har blivit tillagd"
+msgstr "The user has been added"
+
+#: assets/pages/form-validation/form-validation.js.php:31
+#: assets/pages/form-validation/pump.js.php:31
+#: assets/pages/form-validation/regn.js.php:31
+#: assets/pages/form-validation/vilt.js.php:31
+#: assets/pages/form-validation/viltsiren.js.php:31
+msgid "minst 4 tecken och max 4 tecken"
+msgstr "at least 4 characters and max 4 characters"
+
+#: assets/pages/form-validation/form-validation.js.php:36
+#: assets/pages/form-validation/pump.js.php:36
+#: assets/pages/form-validation/regn.js.php:36
+#: assets/pages/form-validation/vilt.js.php:36
+#: assets/pages/form-validation/viltsiren.js.php:36
+msgid "Du kan bara ange siffror här"
+msgstr "Only numbers here please"
+
+#: assets/pages/form-validation/form-validation.js.php:43
+#: assets/pages/form-validation/pump.js.php:43
+#: assets/pages/form-validation/regn.js.php:43
+#: assets/pages/form-validation/vilt.js.php:43
+#: assets/pages/form-validation/viltsiren.js.php:43
+msgid "endast siffror"
+msgstr "only numbers"
+
+#: assets/pages/form-validation/form-validation.js.php:88
+#: assets/pages/form-validation/regn.js.php:88
+msgid "Den angivna sensorn finns redan med i systemet."
+msgstr "This sensor is already added to the system."
+
+#: assets/pages/form-validation/form-validation.js.php:95
+msgid "Sensorn har uppdaterats"
+msgstr "The sensor has been updated"
+
+#: assets/pages/form-validation/pump.js.php:88
+#: assets/pages/form-validation/pumptimer.js.php:78
+msgid "Den angivna pumpen finns redan med i systemet."
+msgstr "This pump is already in the system."
+
+#: assets/pages/form-validation/pump.js.php:95
+msgid "Pumpen har blivit tillagd"
+msgstr "The pump has been added"
+
+#: assets/pages/form-validation/pumptimer.js.php:86
+msgid "Pump timern har blivit tillagd"
+msgstr "The pump timer has been added"
+
+#: assets/pages/form-validation/pumptimer.js.php:92
+msgid "Pump timern har blivit uppdaterats"
+msgstr "The pump timer has been updated"
+
+#: assets/pages/form-validation/redpump.js.php:69
+msgid "Den angivna pumpen finns inte."
+msgstr "This pump don’t exist."
+
+#: assets/pages/form-validation/redpump.js.php:76
+msgid "Pumpen är uppdaterad och ändringarna är slutförda."
+msgstr "The pump is updated and changes has been made."
+
+#: assets/pages/form-validation/redregn.js.php:69
+#: assets/pages/form-validation/redsensor.js.php:69
+#: assets/pages/form-validation/redvilt.js.php:69
+msgid "Den angivna sensorn finns inte."
+msgstr "This sensor don’t exist."
+
+#: assets/pages/form-validation/redregn.js.php:76
+#: assets/pages/form-validation/redsensor.js.php:76
+#: assets/pages/form-validation/redvilt.js.php:76
+msgid "Sensorn är uppdaterad och ändringarna är slutförda."
+msgstr "The sensor is updated and changes are done."
+
+#: assets/pages/form-validation/redviltsiren.js.php:69
+msgid "Den angivna sirenen finns inte."
+msgstr "This siren don’t exist."
+
+#: assets/pages/form-validation/redviltsiren.js.php:76
+msgid "Sirenen är uppdaterad och ändringarna är slutförda."
+msgstr "Siren is updated."
+
+#: assets/pages/form-validation/redzon.js.php:69
+msgid "Den angivna zonen finns inte."
+msgstr "This zone don’t exist."
+
+#: assets/pages/form-validation/redzon.js.php:76
+msgid "Zonen är uppdaterad och ändringarna är slutförda."
+msgstr "The zone is updated and changes are done."
+
+#: assets/pages/form-validation/regn.js.php:95
+msgid "Regnsensorn har blivit tillagd"
+msgstr "Rain sensor has been added"
+
+#: assets/pages/form-validation/uppgifter.js.php:69
+msgid "Inga uppgifter"
+msgstr "No info"
+
+#: assets/pages/form-validation/uppgifter.js.php:76
+msgid "Ändringarna sparade och skickas till systemet för synkronisering."
+msgstr "Changes are made and sent to the system."
+
+#: assets/pages/form-validation/vilt.js.php:88
+#: assets/pages/form-validation/vilttimer.js.php:78
+msgid "Den angivna vilt sensorn finns redan med i systemet."
+msgstr "This animal sensor is already in the system."
+
+#: assets/pages/form-validation/vilt.js.php:95
+msgid "Vilt sensorn har blivit tillagd"
+msgstr "Animal sensor has been added"
+
+#: assets/pages/form-validation/viltsiren.js.php:88
+msgid "Den angivna vilt sirenen finns redan med i systemet."
+msgstr "The animal siren is already in the system."
+
+#: assets/pages/form-validation/viltsiren.js.php:95
+msgid "Vilt sirenen har blivit tillagd"
+msgstr "Animal siren has been added"
+
+#: assets/pages/form-validation/vilttimer.js.php:86
+msgid "Vilt timern har blivit tillagd"
+msgstr "Animal timer has been added"
+
+#: assets/pages/form-validation/vilttimer.js.php:92
+msgid "Vilt timern har blivit uppdaterats"
+msgstr "Animal timer has been updated"
+
+#: assets/pages/form-validation/zon.js.php:28
+msgid "minst 4 tecken och max 30 tecken"
+msgstr "at least 4 characters and max 30 characters"
+
+#: assets/pages/form-validation/zon.js.php:74
+msgid "Den angivna zonen finns redan med i systemet."
+msgstr "This zone is already in the system."
+
+#: assets/pages/form-validation/zon.js.php:81
+msgid "Zonen har blivit tillagd och du kan börja använda den."
+msgstr "The zone has been added and you can use it."
+
+#: assets/pages/form-validation/zonpump.js.php:76
+msgid "Pumpen är tillagd i zonen och du kan nu styra den."
+msgstr "The pump is added to the zone and you can control it."
+
+#: assets/pages/form-validation/zonregn.js.php:69
+msgid "Den angivna regnsensorn finns redan med i zonen."
+msgstr "The rain sensor is already in the zone."
+
+#: assets/pages/form-validation/zonregn.js.php:76
+msgid "Regnsensorn är tillagd i zonen och används nu."
+msgstr "The rain sensor is added to the zone."
+
+#: assets/pages/form-validation/zonsensor.js.php:69
+#: assets/pages/form-validation/zonvilt.js.php:69
+msgid "Den angivna sensorn finns redan med i zonen."
+msgstr "This sensor is already in the zone."
+
+#: assets/pages/form-validation/zonsensor.js.php:76
+msgid "Sensorn är tillagd i zonen och du kan nu få fram statistik över den."
+msgstr "The sensor is added in the zone."
+
+#: assets/pages/form-validation/zonvilt.js.php:76
+msgid "Vilt sensorn är tillagd i zonen och du kan nu använda den."
+msgstr "Animal sensor is added to the zone."
+
+#: include/header.php:42
+msgid "Navigation"
+msgstr "Navigation"
+
+#: include/header.php:53
+msgid "Hem"
+msgstr "Home"
+
+#: include/header.php:59
+msgid "Odlingar"
+msgstr "Zones"
+
+#: include/header.php:94
+msgid "Startsidan"
+msgstr "Startpage"
+
+#: include/header.php:101 zonloggar.php:48 zonloggar.php:92 zonloggar.php:103
+msgid "Odlings loggar"
+msgstr "Zone logs"
+
+#: include/header.php:108
+msgid "Skapa logg"
+msgstr "Create log"
+
+#: include/header.php:122 include/header.php:197 redigerasensor.php:21
+msgid "Redigera sensorer"
+msgstr "Edit soil sensors"
+
+#: include/header.php:136 redigerapump.php:21
+msgid "Redigera pumpar"
+msgstr "Edit pumps"
+
+#: include/header.php:143 include/header.php:272
+msgid "Lägg till vilt"
+msgstr "Add animal"
+
+#: include/header.php:150 include/header.php:282 redigeravilt.php:21
+#: redvilt.php:43 redvilt.php:88 redvilt.php:99
+msgid "Redigera vilt"
+msgstr "Edit animal"
+
+#: include/header.php:164 include/header.php:319 redigeraregn.php:21
+#: redigeraregn.php:64 redigeraregn.php:92
+msgid "Redigera regnsensorer"
+msgstr "Edit rain sensors"
+
+#: include/header.php:224 redpump.php:41 redpump.php:85 redpump.php:96
+msgid "Redigera pump"
+msgstr "Edit pump"
+
+#: include/header.php:234 include/header.php:292
+msgid "Timer"
+msgstr "Timer"
+
+#: include/header.php:262
+msgid "Redigera vilt siren"
+msgstr "Edit animal siren"
+
+#: include/header.php:298 zon.php:432 zonregn.php:139
+msgid "Regnsensor"
+msgstr "Rain sensor"
+
+#: include/header.php:347 redzon.php:42 redzon.php:87 redzon.php:98
+msgid "Redigera zon"
+msgstr "Edit zone"
+
+#: include/header.php:364
+msgid "Inställningar"
+msgstr "Settings"
+
+#: include/header.php:384
+msgid "Starta om"
+msgstr "Restart"
+
+#: include/header.php:394
+msgid "Logga ut"
+msgstr "Log out"
+
+#: index.php:120 zon.php:207
+msgid "Luftfuktighet"
+msgstr "Air Humidity"
+
+#: index.php:135 zon.php:222
+msgid "Luft temperatur"
+msgstr "Air temp"
+
+#: index.php:150 index.php:344
+msgid "Värmeindex"
+msgstr "Heatindex"
+
+#: index.php:165 index.php:345 zon.php:537
+msgid "Datum"
+msgstr "Date"
+
+#: index.php:194 redigerapump.php:101 redigeraregn.php:101
+#: redigerasensor.php:101 redigeravilt.php:101 redigeraviltsiren.php:101
+#: redigerazon.php:101 timerpump.php:102 timervilt.php:102 zon.php:261
+#: zon.php:441 zon.php:536 zonloggar.php:128 zonpumpar.php:139
+#: zonregnar.php:137 zonsensorer.php:137 zonviltar.php:137
+msgid "Namn"
+msgstr "Name"
+
+#: index.php:195 zon.php:177 zon.php:262 zonsensorer.php:138
+msgid "Jordfuktighet"
+msgstr "Soil humidity"
+
+#: index.php:196 zon.php:192 zon.php:263 zonsensorer.php:139
+msgid "Jordtemp"
+msgstr "Soil temp"
+
+#: index.php:197 zon.php:264 zon.php:444 zon.php:539 zonregnar.php:140
+#: zonsensorer.php:140 zonviltar.php:138
+msgid "Volt"
+msgstr "Volt"
+
+#: index.php:198 zon.php:265 zon.php:445
+msgid "Avläst"
+msgstr "Readed"
+
+#: index.php:199 redigerapump.php:102 redigeraregn.php:102
+#: redigerasensor.php:105 redigeravilt.php:102 redigeraviltsiren.php:102
+#: redigerazon.php:103 zon.php:266 zonloggar.php:130
+msgid "Meny"
+msgstr "Menu"
+
+#: index.php:230 sensorstatistik.php:114 zon.php:304
+msgid "Statistik"
+msgstr "Statistic"
+
+#: index.php:251 zon.php:335
+msgid "Funktioner"
+msgstr "Functions"
+
+#: index.php:305 zon.php:403
+msgid "Starta siren"
+msgstr "Start Siren"
+
+#: index.php:333
+msgid "Luft statistik dagar"
+msgstr "Air statistic days"
+
+#: index.php:342
+msgid "Temp"
+msgstr "Temp"
+
+#: index.php:343
+msgid "Fukt"
+msgstr "Humidity"
+
+#: index.php:379
+msgid "Detaljerad statistik"
+msgstr "Detail statistic"
+
+#: loggain.php:24 loggain.php:128 loggain.php:149
+msgid "Logga in"
+msgstr "Login"
+
+#: loggain.php:134
+msgid "Ditt användarnamn"
+msgstr "Username"
+
+#: loggain.php:155
+msgid "Utvecklat av"
+msgstr "Created by"
+
+#: login.php:8
+msgid "Båda fälten krävs."
+msgstr "Enter username and password."
+
+#: login.php:33
+msgid "Felaktigt användarnamn eller lösenord."
+msgstr "Wrong username or password."
+
+#: luftstatistik.php:23 luftstatistik.php:70
+msgid "Luft statistik"
+msgstr "Air statistic"
+
+#: luftstatistik.php:78
+msgid "Luft"
+msgstr "Air"
+
+#: luftstatistik.php:80
+msgid "Luftstatistik"
+msgstr "Air statistic"
+
+#: luftstatistik.php:99 sensorstatistik.php:133
+msgid "Statistik idag"
+msgstr "Statistic today"
+
+#: luftstatistik.php:100
+msgid "Statistik hämtat från idag för luft värden."
+msgstr "Statistic from today for air."
+
+#: luftstatistik.php:113 sensorstatistik.php:147
+msgid "Statistik vecka"
+msgstr "Statistic week"
+
+#: luftstatistik.php:114
+msgid "Statistik hämtat från denna vecka för luft värden."
+msgstr "Statistic from this week for air."
+
+#: luftstatistik.php:127 sensorstatistik.php:161
+msgid "Statistik månad"
+msgstr "Statistic month"
+
+#: luftstatistik.php:128
+msgid "Statistik hämtat från denna månad för luft värden."
+msgstr "Statistic from this month for air."
+
+#: redigerapump.php:64 redigerapump.php:92
+msgid "Redigera bevattnings pumpar"
+msgstr "Edit watering pumps"
+
+#: redigerapump.php:93
+msgid ""
+"Här ser du en lista på alla dina pumpar. Du kan ändra dess värden här eller "
+"tabort dom (dom försvinner även från zoner då.) Notera att tar du bort en "
+"pump kommer sensorer kopplade till pumpen eller zoner bli utan denna pump."
+msgstr ""
+"Here you see a list on all you pumps. You can edit them or remove them. "
+"(They also removes from zone if you delete them)\n"
+"Note that if you remove a pump that is connected to a sensor, they will be "
+"without a pump."
+
+#: redigerapump.php:100 redigeraregn.php:100 redigerasensor.php:100
+#: redigeravilt.php:100 redigeraviltsiren.php:100 redigerazon.php:100
+#: zonpumpar.php:138 zonregnar.php:136 zonsensorer.php:136 zonviltar.php:136
+msgid "Nr"
+msgstr "No"
+
+#: redigerapump.php:119 redigeraregn.php:119 redigerasensor.php:140
+#: redigeravilt.php:118 redigeraviltsiren.php:118 redigerazon.php:119
+msgid "Ändra"
+msgstr "Change"
+
+#: redigeraregn.php:93
+msgid ""
+"Här ser du en lista på alla dina regnsensorer. Du kan ändra dess värden här "
+"eller tabort dom (dom försvinner även från zoner då.) Notera att tar du bort "
+"en regnsensor försvinner alla uppgifter samt att systemet ej vet om det "
+"nyligen regnat."
+msgstr ""
+"Here you se a list on all rain sensors. You can change them or delete them. "
+"(They also removes from zones.) Please note that if you remove an rain "
+"sensor then all logs will be removed about them and also the system will "
+"water even if it rains."
+
+#: redigerasensor.php:64
+msgid "Redigera Jord sensorer"
+msgstr "Edit soil sensors"
+
+#: redigerasensor.php:75 zonsensorer.php:111
+msgid "Jordsensorer"
+msgstr "Soil Sensors"
+
+#: redigerasensor.php:92
+msgid "Redigera jord sensorer"
+msgstr "Edit soil sensors"
+
+#: redigerasensor.php:93 redigeravilt.php:93
+msgid ""
+"Här ser du lista på dina sensorer som finns i systemet. Du kan ändra dess "
+"värden här eller tabort dom (dom försvinner även från zoner då.)"
+msgstr ""
+"Here you see a list on all your sensors. You can change them here or delete "
+"them. (They also will be removed from zones and also all the data about the "
+"sensor.)"
+
+#: redigerasensor.php:103 redsensor.php:162 zon.php:442
+msgid "Fuktighet"
+msgstr "Humidity"
+
+#: redigerasensor.php:104
+msgid "Autostart"
+msgstr "Autostart"
+
+#: redigerasensor.php:136
+msgid "Aktiverat"
+msgstr "Activated"
+
+#: redigerasensor.php:138
+msgid "Inaktiverat"
+msgstr "Inactivated"
+
+#: redigeravilt.php:64 redigeravilt.php:92
+msgid "Redigera vilt sensorer"
+msgstr "Edit animal sensors"
+
+#: redigeravilt.php:75
+msgid "Vilt sensorer"
+msgstr "Animal sensors"
+
+#: redigeraviltsiren.php:21 redviltsiren.php:42 redviltsiren.php:87
+#: redviltsiren.php:98
+msgid "Redigera viltsiren"
+msgstr "Edit animal sirens"
+
+#: redigeraviltsiren.php:64 redigeraviltsiren.php:92
+msgid "Redigera vilt sirener"
+msgstr "Edit animal sirens"
+
+#: redigeraviltsiren.php:75
+msgid "Vilt sirener"
+msgstr "Animal sirens"
+
+#: redigeraviltsiren.php:93
+msgid ""
+"Här ser du lista på dina sirener som finns i systemet. Du kan ändra dess "
+"namn eller ta bort dom. (dom försvinner från vilt sensorer då.)"
+msgstr ""
+"Here you see a list on all your sirens. You can change them here or delete "
+"them. (They also will be removed from zones."
+
+#: redigerazon.php:21 redigerazon.php:64 redigerazon.php:75 redigerazon.php:92
+msgid "Redigera zoner"
+msgstr "Edit zones"
+
+#: redigerazon.php:72 redzon.php:95 zonloggadd.php:86 zonloggedit.php:98
+msgid "Zon"
+msgstr "Zones"
+
+#: redigerazon.php:93
+msgid ""
+"Här ser du lista på dina zoner som finns i systemet. Du kan ändra dess "
+"värden här eller tabort dom (inga sensorer, pumpar, statistik försvinner)"
+msgstr ""
+"Here you see a list on all your zones. You can change theme or remove theme. "
+"(No sensors, pumps, or statics will be removed)"
+
+#: redpump.php:115
+msgid "Redigera befintlig pump"
+msgstr "Edit watering pump"
+
+#: redpump.php:116
+msgid ""
+"Här kan du ställa in uppgifter för denna pump. Du kan enbart ändra namnet då "
+"id numret ej kan ändras."
+msgstr ""
+"Here you can change the info for the pump. You can’t change the id number."
+
+#: redregn.php:41 redregn.php:85 redregn.php:96
+msgid "Redigera regnsensor"
+msgstr "Edit rain sensor"
+
+#: redregn.php:115
+msgid "Redigera befintlig regnsensor"
+msgstr "Edit rain sensor"
+
+#: redregn.php:116
+msgid ""
+"Här kan du ställa in uppgifter för denna regnsensor. Du kan enbart ändra "
+"namnet då id numret ej kan ändras."
+msgstr ""
+"Here you can change the info for the rain sensor. You can’t change the id "
+"number."
+
+#: redsensor.php:44 redsensor.php:88 redsensor.php:99
+msgid "Redigera sensor"
+msgstr "Edit soil sensor"
+
+#: redsensor.php:118
+msgid "Redigera befintlig sensor"
+msgstr "Edit soil sensor"
+
+#: redsensor.php:119
+msgid ""
+"Här kan du ställa in uppgifter för denna sensor. Fuktighet är den procent "
+"jorden ska vara för att anses som \"blöt\". Om det är under det, så kommer "
+"pumpen att automatiskt att starta om autostart är aktiverad."
+msgstr ""
+"Here you can change the soil sensor. Humidity is the level where the soil is "
+"wet. If it’s under that level and auto is on it will auto start watering."
+
+#: redsensor.php:124
+msgid "Bevattnings pump"
+msgstr "Watering pump"
+
+#: redsensor.php:164
+msgid "Anges i procent"
+msgstr "Enter in procent"
+
+#: redsensor.php:170
+msgid "Autostart av pump"
+msgstr "Autostart of pump"
+
+#: redsensor.php:186
+msgid "Aktivera autostart"
+msgstr "Enable autostart"
+
+#: redvilt.php:118
+msgid "Redigera befintlig vilt sensor"
+msgstr "Edit animal sensor"
+
+#: redvilt.php:119
+msgid ""
+"Här kan du ställa in uppgifter för denna sensor. Du kan enbart ändra namnet "
+"då id numret ej kan ändras."
+msgstr ""
+"Here you can change the info for the animal sensor. You can’t change the id "
+"number."
+
+#: redvilt.php:125 redviltsiren.php:124
+msgid "Vilt sensorns namn"
+msgstr "Animal sensor name"
+
+#: redviltsiren.php:117
+msgid "Redigera befintlig vilt siren"
+msgstr "Edit animal siren"
+
+#: redviltsiren.php:118
+msgid ""
+"Här kan du ställa in uppgifter för denna sirenen. Du kan enbart ändra namnet "
+"då id numret ej kan ändras."
+msgstr ""
+"Here you can change the info for the animal siren. You can’t change the id "
+"number."
+
+#: redzon.php:117
+msgid "Redigera befintlig zon"
+msgstr "Edit zone"
+
+#: redzon.php:118
+msgid "Här kan du ställa in uppgifter för denna zon."
+msgstr "Here you can setup info about the zone."
+
+#: redzon.php:124
+msgid "Zonens namn"
+msgstr "Zone name"
+
+#: sensorstatistik.php:56
+msgid "Sensor statistik"
+msgstr "Sensor statistic"
+
+#: sensorstatistik.php:104
+msgid "Sensor statistik för"
+msgstr "Sensor statistic for"
+
+#: sensorstatistik.php:134
+msgid "Statistik hämtat från idag för vald sensor."
+msgstr "Statistic from today for the sensor."
+
+#: sensorstatistik.php:148
+msgid "Statistik hämtat från denna vecka för vald sensor."
+msgstr "Statistic from this week for the sensor."
+
+#: sensorstatistik.php:162
+msgid "Statistik hämtat från denna månad för vald sensor."
+msgstr "Statistic from this month for the sensor."
+
+#: timerpump.php:20 timerpump.php:65 timerpump.php:76
+msgid "Pump timer"
+msgstr "Waterpump timer"
+
+#: timerpump.php:94 timerpump.php:207 timervilt.php:207
+msgid "Pump timers"
+msgstr "Waterpump timers"
+
+#: timerpump.php:95
+msgid ""
+"Här ser du alla pump timers som du har i systemet. Dessa tider kommer pumpen "
+"automatiskt att gå. Notera att i regel så gäller inte slut tiden då pumparna "
+"har inbyggd avstängning efter viss tid."
+msgstr ""
+"Here you see all pump timers in the system. This times the system will "
+"automatic start watering. Note that the pump has an own max time of running "
+"so if the end time is longer, they will stop by the pumps running time."
+
+#: timerpump.php:103 timervilt.php:103
+msgid "Aktiv"
+msgstr "Active"
+
+#: timerpump.php:104 timerpump.php:256 timervilt.php:104 timervilt.php:256
+msgid "Dagar"
+msgstr "Days"
+
+#: timerpump.php:139 timervilt.php:139
+msgid "Start"
+msgstr "Start"
+
+#: timerpump.php:139 timervilt.php:139
+msgid "Stopp"
+msgstr "Stop"
+
+#: timerpump.php:142 timervilt.php:142
+msgid "Måndag - Fredag"
+msgstr "Monday - Friday"
+
+#: timerpump.php:146 timervilt.php:146
+msgid "Hela veckan"
+msgstr "All week"
+
+#: timerpump.php:150 timervilt.php:150
+msgid "Lördag & Söndag"
+msgstr "Saturday & Sunday"
+
+#: timerpump.php:155 timervilt.php:155
+msgid "Mån "
+msgstr "Mon "
+
+#: timerpump.php:160 timervilt.php:160
+msgid "Tis "
+msgstr "Tue "
+
+#: timerpump.php:165 timervilt.php:165
+msgid "Ons "
+msgstr "Wen "
+
+#: timerpump.php:170 timervilt.php:170
+msgid "Tor "
+msgstr "Thu "
+
+#: timerpump.php:175 timervilt.php:175
+msgid "Fre "
+msgstr "Fri "
+
+#: timerpump.php:180 timervilt.php:180
+msgid "Lör "
+msgstr "Sat "
+
+#: timerpump.php:185 timervilt.php:185
+msgid "Sön "
+msgstr "Sun "
+
+#: timerpump.php:192 timervilt.php:192
+msgid "Redigera"
+msgstr "Edit"
+
+#: timerpump.php:208
+msgid ""
+"Här kan du lägga till och redigera befintliga timers. Timers gör att du kan "
+"automatiskt starta bevattningen önskade tider. Du kan ha flera tider på "
+"samma pump."
+msgstr ""
+"Here you can add and edit timers. Timers makes it so you can start watering "
+"at special times. You can have more than just one timer."
+
+#: timerpump.php:235 timervilt.php:235
+msgid "Timer namn"
+msgstr "Timer name"
+
+#: timerpump.php:242 timervilt.php:242 uppgifter.php:242
+msgid "Start tid"
+msgstr "Start time"
+
+#: timerpump.php:249 timervilt.php:249 uppgifter.php:249
+msgid "Slut tid"
+msgstr "End time"
+
+#: timerpump.php:264 timervilt.php:264
+msgid "Måndag"
+msgstr "Monday"
+
+#: timerpump.php:273 timervilt.php:273
+msgid "Tisdag"
+msgstr "Tuesday"
+
+#: timerpump.php:282 timervilt.php:282
+msgid "Onsdag"
+msgstr "Wendsday"
+
+#: timerpump.php:291 timervilt.php:291
+msgid "Torsdag"
+msgstr "Thursday"
+
+#: timerpump.php:300 timervilt.php:300
+msgid "Fredag"
+msgstr "Friday"
+
+#: timerpump.php:309 timervilt.php:309
+msgid "Lördag"
+msgstr "Saturday"
+
+#: timerpump.php:318 timervilt.php:318
+msgid "Söndag"
+msgstr "Sunday"
+
+#: timervilt.php:20 timervilt.php:65 timervilt.php:76
+msgid "Vilt timer"
+msgstr "Animal timer"
+
+#: timervilt.php:94
+msgid "Vilt timers"
+msgstr "Animal timers"
+
+#: timervilt.php:95
+msgid ""
+"Här ser du alla vilt timers i systemet. Dessa tider kommer dom automatiskt "
+"att aktiveras och stängas av."
+msgstr ""
+"Here you see all timers in the system. They will start and stop by this "
+"times."
+
+#: timervilt.php:208
+msgid ""
+"Här kan du lägga till och redigera befintliga timers. Timers gör att du kan "
+"automatiskt starta vilt sensorer önskade tider. Du kan ha flera tider på "
+"samma vilt sensor."
+msgstr ""
+"Here you can add and edit timers. Timers makes it possible to auto start "
+"animal sensors at different times."
+
+#: timervilt.php:213
+msgid "Vilt sensorns ID Nummer"
+msgstr "ID Number"
+
+#: uppgifter.php:52 uppgifter.php:97 uppgifter.php:107
+msgid "Uppgifter"
+msgstr "Settings"
+
+#: uppgifter.php:126
+msgid "Redigera systemets uppgifter"
+msgstr "Edit system settings"
+
+#: uppgifter.php:127
+msgid ""
+"Här kan du ställa in uppgifter för systemet. Notera att det kan ta upp till "
+"1 minut innan systemet har ändrat uppgifterna."
+msgstr ""
+"Here you can setup the settings for the system. Note that it can take up to "
+"1 minute before the system has been updated."
+
+#: uppgifter.php:133
+msgid "Torr jord (i resistans)"
+msgstr "Dry soil (in resistance)"
+
+#: uppgifter.php:135 uppgifter.php:142 uppgifter.php:149 uppgifter.php:156
+msgid "I resistans utan tecken"
+msgstr "In resistance"
+
+#: uppgifter.php:140
+msgid "Blöt jord (i resistans)"
+msgstr "Wet soil (in resistance)"
+
+#: uppgifter.php:147
+msgid "Torr regn (i resistans)"
+msgstr "Dry rain (in resistance)"
+
+#: uppgifter.php:154
+msgid "Blöt regn (i resistans)"
+msgstr "Wet rain (in resistance)"
+
+#: uppgifter.php:161
+msgid "Namn på odlings systemet"
+msgstr "Name on the system"
+
+#: uppgifter.php:168
+msgid "Max tid att köra pumpar"
+msgstr "Max time to run the pumps"
+
+#: uppgifter.php:170
+msgid "I minuter hur länge en pump får köras"
+msgstr "In minutes how long a pump will running"
+
+#: uppgifter.php:175
+msgid "Tidigast att auto starta pump från föregående körning"
+msgstr "When a pump can autostart from last running"
+
+#: uppgifter.php:177
+msgid "I minuter hur när en pump får köras"
+msgstr "In minutes when next start in auto is possible"
+
+#: uppgifter.php:182
+msgid "Stöd vattna vid värme"
+msgstr "Extra watering when hot"
+
+#: uppgifter.php:198
+msgid "Vattna extra vid hög temperatur"
+msgstr "Water extra when hot outside"
+
+#: uppgifter.php:205
+msgid "Lägsta hög temp att stöd bevattna"
+msgstr "Lowest high temp to extra watering"
+
+#: uppgifter.php:207
+msgid "Grader som krävs för stöd bevattning."
+msgstr "Temp that is needed for extra watering."
+
+#: uppgifter.php:212
+msgid "Tid i millisekunder som sirenen vid viltlarm tjuter"
+msgstr "Time in milliseconds that the siren will be on"
+
+#: uppgifter.php:214
+msgid "Ange i millisekunder 1 sek = 1000 milli"
+msgstr "Enter in milliseconds 1 sec = 1000 milli"
+
+#: uppgifter.php:219
+msgid "Ingen natt bevattning"
+msgstr "No night watering"
+
+#: uppgifter.php:235
+msgid "Ingen automatisk bevattning mellan tiderna angivet nedan"
+msgstr "No auto watering between the times entered below"
+
+#: zon.php:326
+msgid "Lägg till en jordsensor till zonen för att få fram dess information"
+msgstr "Add an soil sensor to the zone to get it’s information"
+
+#: zon.php:443
+msgid "Regnar"
+msgstr "Raining"
+
+#: zon.php:482 zonregnar.php:176
+msgid "Ja"
+msgstr "Yes"
+
+#: zon.php:486 zonregnar.php:181
+msgid "Nej"
+msgstr "No"
+
+#: zon.php:527
+msgid "Viltstatus"
+msgstr "Animal status"
+
+#: zon.php:538
+msgid "Tid"
+msgstr "Time"
+
+#: zonloggadd.php:33 zonloggadd.php:78 zonloggadd.php:88
+msgid "Skapa logg rapport"
+msgstr "Create log report"
+
+#: zonloggadd.php:106
+msgid "Skapa en logg rapport"
+msgstr "Create an log report"
+
+#: zonloggadd.php:107
+msgid ""
+"Logg rapport är där du beskriver och dokumenterar din odling för att hålla "
+"koll på odlingen."
+msgstr "Log report is where you can document growth."
+
+#: zonloggadd.php:112 zonloggedit.php:124
+msgid "Rubrik"
+msgstr "Subject"
+
+#: zonloggadd.php:114 zonloggedit.php:126
+msgid "En lämplig rubrik"
+msgstr "A good subject"
+
+#: zonloggar.php:120
+msgid "odlings loggar"
+msgstr "zone logs"
+
+#: zonloggar.php:121
+msgid ""
+"Här finner du alla loggar du har skapat för din odling. Klicka på namnet för "
+"att kunna öppna och redigera loggen."
+msgstr ""
+"Here you find all logs you have created for you zone. Press on the name to "
+"open it for reading or edit it."
+
+#: zonloggar.php:129
+msgid "Senast ändrad"
+msgstr "Last edited"
+
+#: zonloggedit.php:45 zonloggedit.php:100
+msgid "Redigera logg rapport"
+msgstr "Edit zone log"
+
+#: zonloggedit.php:90
+msgid "Redigera Zon logg"
+msgstr "Edit zone log"
+
+#: zonloggedit.php:118
+msgid "Redigera din logg rapport"
+msgstr "Edit your zone log"
+
+#: zonloggedit.php:119
+msgid "Här kan du redigera din logg rapport ifall du behöver göra ändringar."
+msgstr "Here you can edit your zone log if you need to."
+
+#: zonpump.php:56
+msgid "Lägg till pump i zon"
+msgstr "Add pump to zone"
+
+#: zonpump.php:101
+msgid "Addera pump till zon"
+msgstr "Add pump to zone"
+
+#: zonpump.php:109 zonregn.php:109 zonsensor.php:108 zonvilt.php:108
+msgid "Odling"
+msgstr "Zones"
+
+#: zonpump.php:131
+msgid "Lägg till en ny pump till odlingen"
+msgstr "Add a new pump to the zone"
+
+#: zonpump.php:132
+msgid ""
+"Koppla en ny bevattnings pump till denna odling. Välj en befintlig pump från "
+"listan för att koppla den."
+msgstr ""
+"Add a new watering pump to this zone. Select an pump from the list to add it."
+
+#: zonpump.php:175 zonregn.php:175 zonsensor.php:174 zonvilt.php:174
+msgid "Kan inte hitta någon zon med detta id nummer"
+msgstr "Can’t find any zones with this id number"
+
+#: zonpump.php:180
+msgid "Du måste lägga till pumpar först"
+msgstr "You need to add pumps first"
+
+#: zonpumpar.php:58 zonpumpar.php:102
+msgid "Zon pumpar"
+msgstr "Zone pumps"
+
+#: zonpumpar.php:130
+msgid "bevattnings pumpar"
+msgstr "watering pump"
+
+#: zonpumpar.php:131
+msgid ""
+"Här ser du alla bevattnings pumpar som är kopplad till denna zon. Genom att "
+"klicka på radera så tar du bort pumpen från zonen (ej från systemet)"
+msgstr ""
+"Here you see all pumps that are connected to this zone. You can push on "
+"remove to delete it from the zone (not from the system)"
+
+#: zonregn.php:56
+msgid "Lägg till regnsensor i zon"
+msgstr "Add rain sensor to zone"
+
+#: zonregn.php:101
+msgid "Addera regnsensor till zon"
+msgstr "Create rain sensor to zone"
+
+#: zonregn.php:131
+msgid "Lägg till en ny regnsensor till odlingen"
+msgstr "Add a new rain sensor to the zone"
+
+#: zonregn.php:132
+msgid ""
+"Koppla en ny regnsensor till denna odling. Välj en befintlig regnsensor från "
+"listan för att koppla den."
+msgstr ""
+"Add a new rain sensor to this zone. Select an sensor from the list below."
+
+#: zonregn.php:180
+msgid "Du måste lägga till regnsensorer först"
+msgstr "You need to add rain sensors first"
+
+#: zonregnar.php:56 zonregnar.php:100
+msgid "Zon regnsensorer"
+msgstr "Zone rain sensors"
+
+#: zonregnar.php:128
+msgid "regnsensorer"
+msgstr "rain sensors"
+
+#: zonregnar.php:129
+msgid ""
+"Här ser du lista på dina regnsensorer som är kopplade till denna zon. Genom "
+"att klicka på radera så tar du bort sensorn från zonen (ej från systemet)"
+msgstr ""
+"Here is an list on all your rain sensors, that is connected to the zone. "
+"Click on remove to delete it from the zone (not from the system)"
+
+#: zonregnar.php:138
+msgid "Regnfuktighet"
+msgstr "Humidity"
+
+#: zonregnar.php:139
+msgid "Regnat nyligen"
+msgstr "Raining"
+
+#: zonsensor.php:55
+msgid "Lägg till sensor i zon"
+msgstr "Add sensor to zone"
+
+#: zonsensor.php:100
+msgid "Addera sensor till zon"
+msgstr "Add sensor to zone"
+
+#: zonsensor.php:130
+msgid "Lägg till en ny sensor till odlingen"
+msgstr "Add a new sensor to the zone"
+
+#: zonsensor.php:131
+msgid ""
+"Koppla en ny jord sensor till denna odling. Välj en befintlig sensor från "
+"listan för att koppla den."
+msgstr ""
+"Connect a new soil sensor to this zone. Select an sensor from the list below."
+
+#: zonsensor.php:138 zonvilt.php:138
+msgid "Sensor"
+msgstr "Soil Sensors"
+
+#: zonsensor.php:179
+msgid "Du måste lägga till sensorer först"
+msgstr "You need to add sensors first"
+
+#: zonsensorer.php:56
+msgid "Zon sensorer"
+msgstr "Zone sensors"
+
+#: zonsensorer.php:100
+msgid "Zon jord sensorer"
+msgstr "Zone soil sensors"
+
+#: zonsensorer.php:128
+msgid "jord sensorer"
+msgstr "soil Sensors"
+
+#: zonsensorer.php:129
+msgid ""
+"Här ser du lista på dina sensorer som är kopplade till denna zon. Genom att "
+"klicka på radera så tar du bort sensorn från zonen (ej från systemet)"
+msgstr ""
+"Here is an list on all you sensors that are connected to this zone. Click on "
+"remove to delete it from the zone (not from the system)"
+
+#: zonvilt.php:55
+msgid "Lägg till vilt i zon"
+msgstr "Add animal sensor to zone"
+
+#: zonvilt.php:100
+msgid "Addera vilt sensor till zon"
+msgstr "Add animal sensor to zone"
+
+#: zonvilt.php:111
+msgid "Addera vilt sensor"
+msgstr "Add animal sensor"
+
+#: zonvilt.php:130
+msgid "Lägg till en ny vilt sensor till odlingen"
+msgstr "Add a new animal sensor to the zone"
+
+#: zonvilt.php:131
+msgid ""
+"Koppla en ny vilt sensor till denna odling. Välj en befintlig sensor från "
+"listan för att koppla den."
+msgstr ""
+"Connect a new animal sensor to this zone. Select an sensor from the list "
+"below."
+
+#: zonvilt.php:179
+msgid "Du måste lägga till vilt sensorer först"
+msgstr "You need to add animal sensors first"
+
+#: zonviltar.php:56
+msgid "Zon vilt sensorer"
+msgstr "Zone animal sensors"
+
+#: zonviltar.php:100
+msgid "Zon vilt"
+msgstr "Zone animal"
+
+#: zonviltar.php:111
+msgid "Vilt sensor"
+msgstr "Animal sensors"
+
+#: zonviltar.php:128
+msgid "vilt sensorer"
+msgstr "animal sensors"
+
+#: zonviltar.php:129
+msgid ""
+"Här ser du alla vilt sensorer som är kopplad till denna zon. Genom att "
+"klicka på radera så tar du bort sensorn från zonen (ej från systemet)"
+msgstr ""
+"Here is an list on all animal sensors that is connected to the zone. If you "
+"click on remove you will delete the sensor from the zone (not from the "
+"system)"
+
+#~ msgid "Created by"
+#~ msgstr "Create"
