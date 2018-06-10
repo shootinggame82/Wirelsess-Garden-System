@@ -46,4 +46,10 @@ If the Animal sensors is activated to alarm, when they see movments, the base sy
 * NRF24L01 module
 If it's need to water, the base system will activate the pump. Each pump has uniqe number.
 
-You get the most importetnt php and mysql script, that is needed to get the system running, but you need to design and make the website self.
+# The web system
+The webpage is under php file. You need to upload everything on your server, make changes in db.php and upload the mysql database to the server. The default login is admin as username and water as password. If you need to make translation. Use poedit an translation files is under locale folder.
+Don't forget to setup cronjobs. You find them under cronjob.
+timer.php should be running every second. This holds the automation.
+temperatur.php can you set to every 5 minutes, depending on how often you would like to read the air temp.
+dagstatistik.php needs to be run at 23:30 (11:30 PM)
+Good luck
