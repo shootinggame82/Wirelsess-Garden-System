@@ -4,6 +4,7 @@ This is the GitHub for an Wireless system to observe and water your garden or yo
 It's an wireless system that uses 2.4 GHz to send and recive depending on what to do, also uses WIFI to publish to internet.
 
 It's a module system so it can easy expand if you need to control more cultivations. And thru internet you can control it.
+Visit https://www.instructables.com/id/Wireless-Garden-System/ for instructions on building it.
 
 # The Base system is built with:
 * Arduino Mega
