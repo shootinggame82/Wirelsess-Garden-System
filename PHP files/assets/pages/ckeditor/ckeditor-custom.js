@@ -46,7 +46,7 @@ CKEDITOR.replace('editor2', {
   // One HTTP request less will result in a faster startup time.
   // For more information check http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-customConfig
   //customConfig: '',
-  language: 'sv',
+  language: 'en',
 
   // Sometimes applications that convert HTML to PDF prefer setting image width through attributes instead of CSS styles.
   // For more information check:
