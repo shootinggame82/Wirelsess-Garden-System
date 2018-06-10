@@ -1,3 +1,2 @@
 <?php
-//Setup the login for mysql server
-$mysqli = new mysqli("localhost", "username", "pasword", "databasename");
+$mysqli = new mysqli("localhost", "basen82", "tantamalia", "mydb");
