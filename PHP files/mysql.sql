@@ -342,6 +342,7 @@ CREATE TABLE `users` (
 --
 
 
+(1, 'admin', '9460370bb0ca1c98a779b1bcc6861c2c');
 
 -- --------------------------------------------------------
 
@@ -729,7 +730,7 @@ ALTER TABLE `uppgifter`
 -- AUTO_INCREMENT för tabell `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT för tabell `vilt`
 --
